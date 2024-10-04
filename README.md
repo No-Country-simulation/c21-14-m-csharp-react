@@ -20,7 +20,6 @@
 <p align="right">(<a href="#readme-top">volver al inicio</a>)</p>
 
 # Real Estate Investment Platform
-hol amundo
 
 Este proyecto es una plataforma web de inversiones inmobiliarias diseñada para conectar inversores con oportunidades de propiedades. Los inversores pueden explorar una lista de propiedades disponibles, acceder a información detallada, recibir notificaciones personalizadas, y gestionar su portafolio de inversiones. Los administradores pueden agregar nuevas propiedades, gestionar perfiles de inversores y analizar tendencias del mercado para proporcionar mejores recomendaciones y generar reportes financieros.
 

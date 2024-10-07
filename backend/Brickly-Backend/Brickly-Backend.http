@@ -1,0 +1,6 @@
+@Brickly_Backend_HostAddress = http://localhost:5269
+
+GET {{Brickly_Backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

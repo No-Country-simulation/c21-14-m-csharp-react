@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Brickly_Backend</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetEnv" Version="3.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Brickly.DTO\Brickly.DTO.csproj" />
+    <ProjectReference Include="..\Brickly.IOC\Brickly.IOC.csproj" />
+    <ProjectReference Include="..\Brickly.LOGIC\Brickly.LOGIC.csproj" />
+  </ItemGroup>
+
+</Project>

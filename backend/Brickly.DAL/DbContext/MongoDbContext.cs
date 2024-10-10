@@ -41,8 +41,8 @@ namespace Brickly.DAL.DbContext
         }
 
         public IMongoCollection<DocumentType> DocumentTypes => mongoDatabase.GetCollection<DocumentType>("document_types");
-        public IMongoCollection<Portfolio> Admins => mongoDatabase.GetCollection<Portfolio>("admins");
-        public IMongoCollection<Portfolio> Investors => mongoDatabase.GetCollection<Portfolio>("investors");
+        public IMongoCollection<Admin> Admins => mongoDatabase.GetCollection<Admin>("admins");
+        public IMongoCollection<Investor> Investors => mongoDatabase.GetCollection<Investor>("investors");
         public IMongoCollection<Property> Properties => mongoDatabase.GetCollection<Property>("properties");
         public IMongoCollection<Investment> Investments => mongoDatabase.GetCollection<Investment>("investments");
         public IMongoCollection<Favorite> Favorites => mongoDatabase.GetCollection<Favorite>("favorites");

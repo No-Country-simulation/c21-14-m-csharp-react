@@ -24,16 +24,3 @@ C:\Users\kevin\OneDrive\Escritorio\c21-14-m-csharp-react\backend\Brickly.MODEL\o
 C:\Users\kevin\OneDrive\Escritorio\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\refint\Brickly.MODEL.dll
 C:\Users\kevin\OneDrive\Escritorio\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.pdb
 C:\Users\kevin\OneDrive\Escritorio\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\ref\Brickly.MODEL.dll
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\bin\Debug\net8.0\Brickly.MODEL.deps.json
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\bin\Debug\net8.0\Brickly.MODEL.dll
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\bin\Debug\net8.0\Brickly.MODEL.pdb
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.csproj.AssemblyReference.cache
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.AssemblyInfoInputs.cache
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.AssemblyInfo.cs
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.sourcelink.json
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.dll
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\refint\Brickly.MODEL.dll
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\Brickly.MODEL.pdb
-C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.MODEL\obj\Debug\net8.0\ref\Brickly.MODEL.dll

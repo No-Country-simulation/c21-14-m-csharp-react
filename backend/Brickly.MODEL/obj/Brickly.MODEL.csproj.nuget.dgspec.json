@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {}
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
         "projectName": "Brickly.MODEL",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj": {}
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj",
         "projectName": "Brickly.DAL",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj"
               }
             }
           }
@@ -69,17 +69,17 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
         "projectName": "Brickly.DTO",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -130,17 +130,17 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
         "projectName": "Brickly.IOC",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,14 +155,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj"
               }
             }
           }
@@ -207,17 +207,17 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj",
         "projectName": "Brickly.LOGIC",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -232,17 +232,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj"
               }
             }
           }
@@ -281,17 +281,17 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
         "projectName": "Brickly.MODEL",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -352,17 +352,17 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj",
         "projectName": "Brickly.UTILIY",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\obj\\",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj",
+        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -377,11 +377,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj"
               },
-              "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj"
+              "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj": {
+                "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Brickly.MODEL.csproj"
               }
             }
           }

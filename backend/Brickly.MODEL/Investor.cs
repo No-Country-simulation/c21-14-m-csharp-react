@@ -3,7 +3,7 @@ using MongoDB.Bson;
 
 namespace Brickly.MODEL;
 
-public partial class Portfolio
+public partial class Investor
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]

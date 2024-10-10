@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Brickly.DAL
-build_property.ProjectDir = C:\Users\Usuario\Desktop\c21-14-m-csharp-react\backend\Brickly.DAL\
+build_property.ProjectDir = C:\Users\kevin\OneDrive\Escritorio\c21-14-m-csharp-react\backend\Brickly.DAL\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

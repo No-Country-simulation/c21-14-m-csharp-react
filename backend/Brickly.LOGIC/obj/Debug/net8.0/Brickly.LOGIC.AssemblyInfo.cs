@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Brickly.LOGIC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f10f3389ba5b414564c901d682e123c7f55a8bee")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9ba23bdd772dfe24db0cc8bcfcb1c507e737c53")]
 [assembly: System.Reflection.AssemblyProductAttribute("Brickly.LOGIC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Brickly.LOGIC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

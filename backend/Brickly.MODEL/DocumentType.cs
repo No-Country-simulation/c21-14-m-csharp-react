@@ -1,17 +1,14 @@
-﻿using MongoDB.Bson;
+﻿using Brickly.Attributes;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace Brickly.MODEL;
 
+[CollectionName("document_types")]
 public partial class DocumentType
 {
     [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string? Id { get; set; }
-
-    [BsonElement("abbreviation")]
-    public string Abbreviation { get; set; } = string.Empty;
-
-    [BsonElement("document_name")]
-    public string DocumentName { get; set; } = string.Empty;
+    public ObjectId Id { get; set; } // MongoDB ObjectId
+    public string? Abbreviation { get; set; } // 'siglas' in Spanish
+    public string? DocumentName { get; set; } // 'nombre_documento' in Spanish
 }

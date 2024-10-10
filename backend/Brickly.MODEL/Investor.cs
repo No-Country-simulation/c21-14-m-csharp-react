@@ -5,31 +5,16 @@ namespace Brickly.MODEL;
 
 public partial class Investor
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string? Id { get; set; }
-
-    [BsonElement("document_type_id")]
-    public string? DocumentTypeId { get; set; } 
-
-    [BsonElement("first_name")]
-    public string FirstName { get; set; } = string.Empty;
-
-    [BsonElement("last_name")]
-    public string LastName { get; set; } = string.Empty;    
-
-    [BsonElement("email")]
-    public string Email { get; set; } = string.Empty;
-
-    [BsonElement("phone")]
-    public string Phone { get; set; } = string.Empty;
-
-    [BsonElement("address")]
-    public string Address { get; set; } = string.Empty;
-
-    [BsonElement("registration_date")]
-    public DateTime RegistrationDate { get; set; }
-
-    [BsonElement("document_number")]
-    public string DocumentNumber { get; set; } = string.Empty;
+    public ObjectId Id { get; set; }
+    public ObjectId DocumentTypeId { get; set; } // Reference to DocumentType 
+    public ObjectId CountryId { get; set; } // Reference to Country 
+    public string? FirstName { get; set; } // 'nombre' in Spanish 
+    public string? LastName { get; set; } // 'apellido' in Spanish 
+    public string? Email { get; set; }
+    public string? Phone { get; set; } // 'telefono' in Spanish 
+    public string? Address { get; set; } // 'direccion' in Spanish 
+    public string? ProfilePictureUrl { get; set; } // 'urlFotoPerfil' in Spanish 
+    public DateTime RegistrationDate { get; set; } = DateTime.UtcNow;
+    public string? DocumentNumber { get; set; } // 'numero_documento' in Spanish 
+    public bool Status { get; set; }
 }

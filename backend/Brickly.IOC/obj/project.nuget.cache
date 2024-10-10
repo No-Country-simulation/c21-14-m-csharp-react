@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hwkMRN0ysEw=",
+  "dgSpecHash": "WncGAOIz9CM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
+  "projectFilePath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kevin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\kevin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

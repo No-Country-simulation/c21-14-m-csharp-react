@@ -390,10 +390,21 @@
           "lib/net7.0/ZstdSharp.dll": {}
         }
       },
+      "Brickly.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Brickly.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Brickly.Attributes.dll": {}
+        }
+      },
       "Brickly.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Brickly.Attributes": "1.0.0",
           "Brickly.MODEL": "1.0.0"
         },
         "compile": {
@@ -433,6 +444,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Brickly.Attributes": "1.0.0",
           "MongoDB.Bson": "2.29.0",
           "MongoDB.Driver": "2.29.0"
         },
@@ -1116,6 +1128,11 @@
         "zstdsharp.port.nuspec"
       ]
     },
+    "Brickly.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../Brickly.Attributes/Brickly.Attributes.csproj",
+      "msbuildProject": "../Brickly.Attributes/Brickly.Attributes.csproj"
+    },
     "Brickly.DAL/1.0.0": {
       "type": "project",
       "path": "../Brickly.DAL/Brickly.DAL.csproj",
@@ -1156,11 +1173,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
+      "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
       "projectName": "Brickly.IOC",
-      "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
+      "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Brickly.IOC.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\obj\\",
+      "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1178,14 +1195,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
-              "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj"
+            "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj": {
+              "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Brickly.DAL.csproj"
             },
-            "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj": {
-              "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj"
+            "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj": {
+              "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj"
             },
-            "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
-              "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj"
+            "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj": {
+              "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj"
             }
           }
         }

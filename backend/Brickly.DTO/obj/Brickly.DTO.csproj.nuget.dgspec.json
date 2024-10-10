@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {}
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
+    "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
         "projectName": "Brickly.DTO",
-        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
+        "projectPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
         "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\obj\\",
+        "outputPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",

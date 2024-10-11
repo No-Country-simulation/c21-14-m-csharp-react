@@ -7,7 +7,7 @@ async function Navbar() {
   console.log(session);
 
   return (
-    <nav className="flex justify-between items-center px-24 py-3">
+    <nav className="flex justify-between items-center px-24 p-8">
       <h1 className="text-xl font-bold">Brickly Logo</h1>
 
       <ul className="flex gap-x-4">

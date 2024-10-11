@@ -8,7 +8,7 @@ async function Navbar() {
 
   return (
     <nav className="flex justify-between items-center bg-trueGray-200 px-24 p-8">
-      <h1 className="text-xl font-bold">Brickly Logo</h1>
+      <h1 className="text-xl font-bold"> <Link href="/">Brickly Logo</Link></h1>
 
       <ul className="flex gap-x-4">
             <li>

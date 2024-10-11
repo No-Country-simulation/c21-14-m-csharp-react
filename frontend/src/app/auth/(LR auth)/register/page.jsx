@@ -1,6 +1,7 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
+import Image from "@/components/Img";
 
 
 
@@ -37,10 +38,11 @@ function RegisterPage() {
   console.log(errors);
 
   return (
-   
-    <div className="h-[calc(100vh-7rem)] flex justify-center items-center">
-      <form onSubmit={onSubmit} className="w-1/4">
-        <h1 className="text-slate-200 font-bold text-4xl mb-4">Register</h1>
+   <>
+    <div className="h-[calc(100vh-8rem)] flex justify-center bg-white items-center ">
+   <Image/>
+      <form onSubmit={onSubmit} className="w-1/3">
+        <h1 className=" font-bold text-2xl mb-4">CREA TU CUENTA</h1>
 
         <label htmlFor="username" className="text-slate-500 mb-2 block text-sm">
           Username:
@@ -129,7 +131,7 @@ function RegisterPage() {
         </button>
       </form>
     </div>
-   
+    </>
   );
 }
 export default RegisterPage;

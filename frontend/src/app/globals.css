@@ -5,3 +5,8 @@
 body {
     @apply bg-slate-300;
 }
+.imagen{
+    overflow: hidden;
+
+    width: 58%;
+}

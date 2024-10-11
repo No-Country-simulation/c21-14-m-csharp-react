@@ -1,10 +1,19 @@
+import Navbar from "@/components/Navbar"
+
 function HomePage() {
   return (
-    <section className="h-[calc(100vh-7rem)] flex justify-center items-center">
-      <div>
-        <h1 className="text-white text-5xl">Home Page</h1>
+   <> 
+     <Navbar/>
+     <section className="h-[calc(100vh-7rem)] flex justify-center items-center flex-col ">
+    
+      <div className="text-8xl font-bold ">
+        <p className="col-12 ">Invierte en bienes raíces </p>
+        <p className="ml-20 col-12">desde $1000 dólares</p>
       </div>
+      <button className="block p-7 rounded-md bg-gray-950 text-white mt-11 ">VER PROYECTOS</button>
     </section>
+   </>
+  
   )
 }
 

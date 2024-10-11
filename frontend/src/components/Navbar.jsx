@@ -7,20 +7,20 @@ async function Navbar() {
   console.log(session);
 
   return (
-    <nav className="flex justify-between items-center bg-gray-950 text-white px-24 py-3">
-      <h1 className="text-xl font-bold">NextAuth</h1>
+    <nav className="flex justify-between items-center px-24 py-3">
+      <h1 className="text-xl font-bold">Brickly Logo</h1>
 
-      <ul className="flex gap-x-2">
+      <ul className="flex gap-x-4">
         {!session?.user ? (
           <>
             <li>
-              <Link href="/">Home</Link>
+              <Link href="/">COMO FUNCIONA</Link>
             </li>
             <li>
-              <Link href="/auth/login">Login</Link>
+              <Link href="/auth/login">INGRESAR</Link>
             </li>
             <li>
-              <Link href="/auth/register">Register</Link>
+              <Link className="p-2 px-4 rounded-md bg-gray-950 text-white" href="/auth/register">CREAR CUENTA</Link>
             </li>
           </>
         ) : (

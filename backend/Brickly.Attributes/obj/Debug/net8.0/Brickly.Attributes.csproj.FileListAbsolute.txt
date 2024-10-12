@@ -1,0 +1,12 @@
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\bin\Debug\net8.0\Brickly.Attributes.deps.json
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\bin\Debug\net8.0\Brickly.Attributes.dll
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\bin\Debug\net8.0\Brickly.Attributes.pdb
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\Brickly.Attributes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\Brickly.Attributes.AssemblyInfoInputs.cache
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\Brickly.Attributes.AssemblyInfo.cs
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\Brickly.Attributes.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\Brickly.Attributes.sourcelink.json
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\Brickly.Attributes.dll
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\refint\Brickly.Attributes.dll
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\Brickly.Attributes.pdb
+C:\Users\kevin\OneDrive\Escritorio\nuevo\c21-14-m-csharp-react\backend\Brickly.Attributes\obj\Debug\net8.0\ref\Brickly.Attributes.dll

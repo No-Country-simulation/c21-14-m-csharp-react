@@ -1,0 +1,381 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34A1C97E-604D-4F5A-8A58-E23C8D86DCE2}|Brickly.DAL\\Brickly.DAL.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dal\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34A1C97E-604D-4F5A-8A58-E23C8D86DCE2}|Brickly.DAL\\Brickly.DAL.csproj|solutionrelative:brickly.dal\\repository\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.logic\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|solutionrelative:brickly.logic\\services\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.logic\\funcions\\extensionfuncions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|solutionrelative:brickly.logic\\funcions\\extensionfuncions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4D7709-75EF-4D12-AD6F-A78D57743AB2}|Brickly-Backend\\Brickly-Backend.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly-backend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4D7709-75EF-4D12-AD6F-A78D57743AB2}|Brickly-Backend\\Brickly-Backend.csproj|solutionrelative:brickly-backend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.logic\\services\\contract\\adminservice\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|solutionrelative:brickly.logic\\services\\contract\\adminservice\\iadminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dto\\obtain\\admindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|solutionrelative:brickly.dto\\obtain\\admindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DAF3B0F-4AB1-45F0-B837-57FE39DD64CD}|Brickly.UTILIY\\Brickly.UTILIY.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.utiliy\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DAF3B0F-4AB1-45F0-B837-57FE39DD64CD}|Brickly.UTILIY\\Brickly.UTILIY.csproj|solutionrelative:brickly.utiliy\\automapperprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dto\\obtain\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|solutionrelative:brickly.dto\\obtain\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dto\\update\\updateadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|solutionrelative:brickly.dto\\update\\updateadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dto\\register\\documenttypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|solutionrelative:brickly.dto\\register\\documenttypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dto\\register\\createadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|solutionrelative:brickly.dto\\register\\createadmindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dto\\validations\\customvalidations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|solutionrelative:brickly.dto\\validations\\customvalidations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.dto\\brickly.dto.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CB0DBD14-A85C-4C25-9306-C8BEA712018B}|Brickly.DTO\\Brickly.DTO.csproj|solutionrelative:brickly.dto\\brickly.dto.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.logic\\services\\documenttypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|solutionrelative:brickly.logic\\services\\documenttypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F4D7709-75EF-4D12-AD6F-A78D57743AB2}|Brickly-Backend\\Brickly-Backend.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly-backend\\controllers\\documenttypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F4D7709-75EF-4D12-AD6F-A78D57743AB2}|Brickly-Backend\\Brickly-Backend.csproj|solutionrelative:brickly-backend\\controllers\\documenttypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{017605B4-9D2E-4C9B-A033-E33C12A82F06}|Brickly.MODEL\\Brickly.MODEL.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{017605B4-9D2E-4C9B-A033-E33C12A82F06}|Brickly.MODEL\\Brickly.MODEL.csproj|solutionrelative:brickly.model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DAF3B0F-4AB1-45F0-B837-57FE39DD64CD}|Brickly.UTILIY\\Brickly.UTILIY.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.utiliy\\brickly.utiliy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0DAF3B0F-4AB1-45F0-B837-57FE39DD64CD}|Brickly.UTILIY\\Brickly.UTILIY.csproj|solutionrelative:brickly.utiliy\\brickly.utiliy.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{017605B4-9D2E-4C9B-A033-E33C12A82F06}|Brickly.MODEL\\Brickly.MODEL.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.model\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{017605B4-9D2E-4C9B-A033-E33C12A82F06}|Brickly.MODEL\\Brickly.MODEL.csproj|solutionrelative:brickly.model\\documenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.logic\\brickly.logic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{86FE38E1-FF2D-4BAB-8683-1C892D64F24C}|Brickly.LOGIC\\Brickly.LOGIC.csproj|solutionrelative:brickly.logic\\brickly.logic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96A3C350-61D5-41E4-A62C-81C5D742F6D4}|Brickly.IOC\\Brickly.IOC.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.ioc\\dependecy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{96A3C350-61D5-41E4-A62C-81C5D742F6D4}|Brickly.IOC\\Brickly.IOC.csproj|solutionrelative:brickly.ioc\\dependecy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{017605B4-9D2E-4C9B-A033-E33C12A82F06}|Brickly.MODEL\\Brickly.MODEL.csproj|c:\\users\\kevin\\onedrive\\escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\brickly.model\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{017605B4-9D2E-4C9B-A033-E33C12A82F06}|Brickly.MODEL\\Brickly.MODEL.csproj|solutionrelative:brickly.model\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminService.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Services\\AdminService.cs",
+              "RelativeDocumentMoniker": "Brickly.LOGIC\\Services\\AdminService.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Services\\AdminService.cs",
+              "RelativeToolTip": "Brickly.LOGIC\\Services\\AdminService.cs",
+              "ViewState": "AgIAAGkBAAAAAAAAAAAAAHoBAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:45:05.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateAdminDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Register\\CreateAdminDto.cs",
+              "RelativeDocumentMoniker": "Brickly.DTO\\Register\\CreateAdminDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Register\\CreateAdminDto.cs",
+              "RelativeToolTip": "Brickly.DTO\\Register\\CreateAdminDto.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:23:37.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UpdateAdminDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Update\\UpdateAdminDto.cs",
+              "RelativeDocumentMoniker": "Brickly.DTO\\Update\\UpdateAdminDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Update\\UpdateAdminDto.cs",
+              "RelativeToolTip": "Brickly.DTO\\Update\\UpdateAdminDto.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAACQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:25:52.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomValidations.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Validations\\CustomValidations.cs",
+              "RelativeDocumentMoniker": "Brickly.DTO\\Validations\\CustomValidations.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Validations\\CustomValidations.cs",
+              "RelativeToolTip": "Brickly.DTO\\Validations\\CustomValidations.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T04:34:54.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AutoMapperProfile.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\AutoMapperProfile.cs",
+              "RelativeDocumentMoniker": "Brickly.UTILIY\\AutoMapperProfile.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\AutoMapperProfile.cs",
+              "RelativeToolTip": "Brickly.UTILIY\\AutoMapperProfile.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:27:39.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Obtain\\LoginDto.cs",
+              "RelativeDocumentMoniker": "Brickly.DTO\\Obtain\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Obtain\\LoginDto.cs",
+              "RelativeToolTip": "Brickly.DTO\\Obtain\\LoginDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T04:02:31.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly-Backend\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Brickly-Backend\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly-Backend\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Brickly-Backend\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAQwAgBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:04:44.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Repository\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Brickly.DAL\\Repository\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DAL\\Repository\\GenericRepository.cs",
+              "RelativeToolTip": "Brickly.DAL\\Repository\\GenericRepository.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAHsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T00:00:41.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExtensionFuncions.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Funcions\\ExtensionFuncions.cs",
+              "RelativeDocumentMoniker": "Brickly.LOGIC\\Funcions\\ExtensionFuncions.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Funcions\\ExtensionFuncions.cs",
+              "RelativeToolTip": "Brickly.LOGIC\\Funcions\\ExtensionFuncions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:09:33.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DocumentTypeDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Register\\DocumentTypeDto.cs",
+              "RelativeDocumentMoniker": "Brickly.DTO\\Register\\DocumentTypeDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Register\\DocumentTypeDto.cs",
+              "RelativeToolTip": "Brickly.DTO\\Register\\DocumentTypeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T03:11:24.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAdminService.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Services\\Contract\\AdminService\\IAdminService.cs",
+              "RelativeDocumentMoniker": "Brickly.LOGIC\\Services\\Contract\\AdminService\\IAdminService.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Services\\Contract\\AdminService\\IAdminService.cs",
+              "RelativeToolTip": "Brickly.LOGIC\\Services\\Contract\\AdminService\\IAdminService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:18:55.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminDto.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Obtain\\AdminDto.cs",
+              "RelativeDocumentMoniker": "Brickly.DTO\\Obtain\\AdminDto.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Obtain\\AdminDto.cs",
+              "RelativeToolTip": "Brickly.DTO\\Obtain\\AdminDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:38:12.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Brickly.DTO",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
+              "RelativeDocumentMoniker": "Brickly.DTO\\Brickly.DTO.csproj",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.DTO\\Brickly.DTO.csproj",
+              "RelativeToolTip": "Brickly.DTO\\Brickly.DTO.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-12T01:25:39.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DocumentTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Services\\DocumentTypeService.cs",
+              "RelativeDocumentMoniker": "Brickly.LOGIC\\Services\\DocumentTypeService.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Services\\DocumentTypeService.cs",
+              "RelativeToolTip": "Brickly.LOGIC\\Services\\DocumentTypeService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAHgAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T23:59:39.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DocumentTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly-Backend\\Controllers\\DocumentTypeController.cs",
+              "RelativeDocumentMoniker": "Brickly-Backend\\Controllers\\DocumentTypeController.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly-Backend\\Controllers\\DocumentTypeController.cs",
+              "RelativeToolTip": "Brickly-Backend\\Controllers\\DocumentTypeController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:05:09.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DocumentType.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\DocumentType.cs",
+              "RelativeDocumentMoniker": "Brickly.MODEL\\DocumentType.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\DocumentType.cs",
+              "RelativeToolTip": "Brickly.MODEL\\DocumentType.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAuwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T00:47:44.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Admin.cs",
+              "RelativeDocumentMoniker": "Brickly.MODEL\\Admin.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Admin.cs",
+              "RelativeToolTip": "Brickly.MODEL\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:19:16.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Brickly.UTILIY",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj",
+              "RelativeDocumentMoniker": "Brickly.UTILIY\\Brickly.UTILIY.csproj",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.UTILIY\\Brickly.UTILIY.csproj",
+              "RelativeToolTip": "Brickly.UTILIY\\Brickly.UTILIY.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-12T01:29:41.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Dependecy.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Dependecy.cs",
+              "RelativeDocumentMoniker": "Brickly.IOC\\Dependecy.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.IOC\\Dependecy.cs",
+              "RelativeToolTip": "Brickly.IOC\\Dependecy.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:07:41.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Brickly.LOGIC",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj",
+              "RelativeDocumentMoniker": "Brickly.LOGIC\\Brickly.LOGIC.csproj",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.LOGIC\\Brickly.LOGIC.csproj",
+              "RelativeToolTip": "Brickly.LOGIC\\Brickly.LOGIC.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-12T02:08:18.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Property.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Property.cs",
+              "RelativeDocumentMoniker": "Brickly.MODEL\\Property.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\nuevo\\c21-14-m-csharp-react\\backend\\Brickly.MODEL\\Property.cs",
+              "RelativeToolTip": "Brickly.MODEL\\Property.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T01:22:14.506Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

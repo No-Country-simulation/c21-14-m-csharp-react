@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Brickly.Attributes\Brickly.Attributes.csproj" />
     <ProjectReference Include="..\Brickly.MODEL\Brickly.MODEL.csproj" />
   </ItemGroup>
 

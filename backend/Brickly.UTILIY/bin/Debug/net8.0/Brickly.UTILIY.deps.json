@@ -221,6 +221,14 @@
           }
         }
       },
+      "Brickly.Attributes/1.0.0": {
+        "runtime": {
+          "Brickly.Attributes.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Brickly.DTO/1.0.0": {
         "runtime": {
           "Brickly.DTO.dll": {
@@ -231,6 +239,7 @@
       },
       "Brickly.MODEL/1.0.0": {
         "dependencies": {
+          "Brickly.Attributes": "1.0.0",
           "MongoDB.Bson": "2.29.0",
           "MongoDB.Driver": "2.29.0"
         },
@@ -416,6 +425,11 @@
       "sha512": "sha512-U9Ix4l4cl58Kzz1rJzj5hoVTjmbx1qGMwzAcbv1j/d3NzrFaESIurQyg+ow4mivCgkE3S413y+U9k4WdnEIkRA==",
       "path": "zstdsharp.port/0.7.3",
       "hashPath": "zstdsharp.port.0.7.3.nupkg.sha512"
+    },
+    "Brickly.Attributes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Brickly.DTO/1.0.0": {
       "type": "project",

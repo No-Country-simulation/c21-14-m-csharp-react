@@ -36,18 +36,19 @@ namespace Brickly.DAL.DbContext
         private void InitializeCollections()
         {
             // Puedes seguir usando el método de crear colecciones aquí si lo necesitas
-            CreateCollectionIfNotExists("document_types");
             CreateCollectionIfNotExists("admins");
-            CreateCollectionIfNotExists("investors");
-            CreateCollectionIfNotExists("properties");
-            CreateCollectionIfNotExists("investments");
-            CreateCollectionIfNotExists("favorites");
-            CreateCollectionIfNotExists("notifications");
-            CreateCollectionIfNotExists("portfolios");
-            CreateCollectionIfNotExists("sponsorship_suggestions");
+            CreateCollectionIfNotExists("country");
+            CreateCollectionIfNotExists("document_types");
             CreateCollectionIfNotExists("earnings");
-            CreateCollectionIfNotExists("payment_methods");
+            CreateCollectionIfNotExists("favorites");
+            CreateCollectionIfNotExists("investments");
+            CreateCollectionIfNotExists("investors");
+            CreateCollectionIfNotExists("notifications");
             CreateCollectionIfNotExists("payment_details");
+            CreateCollectionIfNotExists("payment_methods");
+            CreateCollectionIfNotExists("portfolios");
+            CreateCollectionIfNotExists("properties");
+            CreateCollectionIfNotExists("sponsorship_suggestions");
         }
 
         private void CreateCollectionIfNotExists(string collectionName)
@@ -63,17 +64,18 @@ namespace Brickly.DAL.DbContext
         /// <summary>
         /// Propiedades de colección para cada modelo.
         /// </summary>
-        public IMongoCollection<DocumentType> DocumentTypes => GetCollection<DocumentType>();
         public IMongoCollection<Admin> Admins => GetCollection<Admin>();
-        public IMongoCollection<Investor> Investors => GetCollection<Investor>();
-        public IMongoCollection<Property> Properties => GetCollection<Property>();
-        public IMongoCollection<Investment> Investments => GetCollection<Investment>();
-        public IMongoCollection<Favorite> Favorites => GetCollection<Favorite>();
-        public IMongoCollection<Notification> Notifications => GetCollection<Notification>();
-        public IMongoCollection<Portfolio> Portfolios => GetCollection<Portfolio>();
-        public IMongoCollection<SponsorshipSuggestion> SponsorshipSuggestions => GetCollection<SponsorshipSuggestion>();
+        public IMongoCollection<Country> Country  => GetCollection<Country>();
+        public IMongoCollection<DocumentType> DocumentTypes => GetCollection<DocumentType>();
         public IMongoCollection<Earnings> Earnings => GetCollection<Earnings>();
-        public IMongoCollection<PaymentMethod> PaymentMethods => GetCollection<PaymentMethod>();
+        public IMongoCollection<Favorite> Favorites => GetCollection<Favorite>();
+        public IMongoCollection<Investment> Investments => GetCollection<Investment>();
+        public IMongoCollection<Investor> Investors => GetCollection<Investor>();
+        public IMongoCollection<Notification> Notifications => GetCollection<Notification>();
         public IMongoCollection<PaymentDetail> PaymentDetails => GetCollection<PaymentDetail>();
+        public IMongoCollection<PaymentMethod> PaymentMethods => GetCollection<PaymentMethod>();
+        public IMongoCollection<Portfolio> Portfolios => GetCollection<Portfolio>();
+        public IMongoCollection<Property> Properties => GetCollection<Property>();
+        public IMongoCollection<SponsorshipSuggestion> SponsorshipSuggestions => GetCollection<SponsorshipSuggestion>();
     }
 }

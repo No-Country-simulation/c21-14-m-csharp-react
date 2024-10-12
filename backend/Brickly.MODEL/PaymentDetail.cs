@@ -1,19 +1,28 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using Brickly.Attributes;
 
-namespace Brickly.MODEL
+namespace Brickly.MODEL;
+
+[CollectionName("payment_details")]
+
+public partial class PaymentDetail
 {
-    public partial class PaymentDetail
-    {
-        public ObjectId Id { get; set; }
-        public ObjectId PaymentMethodId { get; set; } // Reference to PaymentMethod 
-        public ObjectId InvestmentId { get; set; } // Reference to Investment 
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? IdPaymentDetail { get; set; }
 
-        [BsonDefaultValue(0)]
-        [BsonRepresentation(BsonType.Double)]
-        public double AmountPaid { get; set; } = 0;
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? IdPaymentMethod { get; set; }
 
-        [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
-        public DateTime PaymentDate { get; set; } = DateTime.UtcNow;
-    }
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? IdInvestment { get; set; }  
+
+    [BsonDefaultValue(0)]
+    [BsonRepresentation(BsonType.Double)]
+    public double AmountPaid { get; set; } = 0;
+
+    [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
+    public DateTime PaymentDate { get; set; } = DateTime.UtcNow;
 }
+

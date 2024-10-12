@@ -1,14 +1,26 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using Brickly.Attributes;
 
 namespace Brickly.MODEL;
 
+[CollectionName("notifications")]
 public partial class Notification
 {
-    public ObjectId Id { get; set; }
-    public ObjectId InvestorId { get; set; } // Reference to Investor 
-    public ObjectId PropertyId { get; set; } // Reference to Property 
-    public string? Message { get; set; } // 'mensaje' in Spanish 
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)] 
+    public string? IdNotification { get; set; }
+
+    [BsonRepresentation(BsonType.ObjectId)] 
+    public string? IdInvestor { get; set; }
+
+    [BsonRepresentation(BsonType.ObjectId)] 
+    public string? IdProperty { get; set; }
+
+    public string? Message { get; set; }
+
+    [BsonDateTimeOptions(Kind = DateTimeKind.Utc)] // Asegura que se guarde como UTC.
     public DateTime NotificationDate { get; set; } = DateTime.UtcNow;
+
     public bool Status { get; set; }
 }

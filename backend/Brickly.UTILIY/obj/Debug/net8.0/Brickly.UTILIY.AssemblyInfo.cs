@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Brickly.UTILIY")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ff53c7eaba0572f94631ab0ccfdf31ba403aa3b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19deff614a0cc033f419d64561ceae5c4fb09917")]
 [assembly: System.Reflection.AssemblyProductAttribute("Brickly.UTILIY")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Brickly.UTILIY")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

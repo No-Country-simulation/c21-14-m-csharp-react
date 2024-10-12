@@ -1,13 +1,23 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using Brickly.Attributes;
 
 namespace Brickly.MODEL;
 
+[CollectionName("portfolios")]
+
 public partial class Portfolio
 {
-    public ObjectId Id { get; set; }
-    public ObjectId InvestorId { get; set; } // Reference to Investor 
-    public string PortfolioName { get; set; } = ""; // 'nombre_portafolio' in Spanish 
-    public DateTime CreationDate { get; set; } = DateTime.UtcNow;
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? IdPortfolio { get; set; }
+
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? InvestorId { get; set; } 
+
+    public string PortfolioName { get; set; } = "";
     public bool Status { get; set; }
+
+    [BsonDateTimeOptions(Kind = DateTimeKind.Utc)]
+    public DateTime CreationDate { get; set; } = DateTime.UtcNow;
 }

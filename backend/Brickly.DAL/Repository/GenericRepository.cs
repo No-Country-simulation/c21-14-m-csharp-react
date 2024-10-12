@@ -2,6 +2,8 @@
 using Brickly.DAL.Repository.Contract;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using MongoDB.Driver.Linq;
+using System.Linq.Expressions;
 
 namespace Brickly.DAL.Repository
 {
@@ -38,11 +40,12 @@ namespace Brickly.DAL.Repository
         /// <param name="id">El ID del documento a eliminar.</param>
         /// <returns>Tarea asíncrona que representa la operación.</returns>
         /// <exception cref="Exception">Lanza una excepción si ocurre un error al eliminar el documento.</exception>
-        public async Task DeleteAsync(ObjectId id)
+        public async Task DeleteAsync(string id)
         {
             try
             {
-                var result = await collection.DeleteOneAsync(Builders<T>.Filter.Eq("_id", id));
+                var objectId = new ObjectId(id); // Convertir a ObjectId si es necesario
+                var result = await collection.DeleteOneAsync(Builders<T>.Filter.Eq("_id", objectId));
                 if (result.DeletedCount == 0)
                 {
                     throw new Exception("No se encontró el documento a eliminar.");
@@ -72,16 +75,36 @@ namespace Brickly.DAL.Repository
         }
 
         /// <summary>
+        /// Método para obtener un documento basado en una condición específica.
+        /// </summary>
+        /// <param name="predicate">La condición para filtrar los documentos.</param>
+        /// <returns>El documento que cumple con la condición.</returns>
+        /// <exception cref="Exception">Lanza una excepción si ocurre un error al obtener el documento.</exception>
+        public async Task<T> GetByConditionAsync(Expression<Func<T, bool>> predicate)
+        {
+            try
+            {
+                // Utilizamos AsQueryable para aplicar el predicado de búsqueda
+                return await collection.AsQueryable().FirstOrDefaultAsync(predicate);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error al obtener el documento por condición: {ex.Message}", ex);
+            }
+        }
+
+        /// <summary>
         /// Método para obtener un documento específico usando su ID.
         /// </summary>
         /// <param name="id">El ID del documento a obtener.</param>
         /// <returns>El documento encontrado de tipo T.</returns>
         /// <exception cref="Exception">Lanza una excepción si ocurre un error al obtener el documento.</exception>
-        public async Task<T> GetByIdAsync(ObjectId id)
+        public async Task<T> GetByIdAsync(string id)
         {
             try
             {
-                return await collection.Find(Builders<T>.Filter.Eq("_id", id)).FirstOrDefaultAsync();
+                var objectId = new ObjectId(id);
+                return await collection.Find(Builders<T>.Filter.Eq("_id", objectId)).FirstOrDefaultAsync();
             }
             catch (Exception ex)
             {
@@ -96,11 +119,20 @@ namespace Brickly.DAL.Repository
         /// <param name="entity">La nueva entidad que reemplazará al documento existente.</param>
         /// <returns>Tarea asíncrona que representa la operación.</returns>
         /// <exception cref="Exception">Lanza una excepción si ocurre un error al actualizar el documento.</exception>
-        public async Task UpdateAsync(ObjectId id, T entity)
+        public async Task UpdateAsync(string id, T entity)
         {
             try
             {
-                var result = await collection.ReplaceOneAsync(Builders<T>.Filter.Eq("_id", id), entity);
+                var objectId = new ObjectId(id); // Convertir a ObjectId si es necesario
+
+                var propertyInfo = entity.GetType().GetProperty("_id");
+                
+                if (propertyInfo != null)
+                {
+                    propertyInfo.SetValue(entity, objectId); // Asegurarse de que el _id esté correcto
+                }
+
+                var result = await collection.ReplaceOneAsync(Builders<T>.Filter.Eq("_id", objectId), entity);
                 if (result.MatchedCount == 0)
                 {
                     throw new Exception("No se encontró el documento a actualizar.");

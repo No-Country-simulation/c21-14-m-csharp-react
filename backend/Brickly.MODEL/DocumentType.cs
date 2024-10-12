@@ -8,7 +8,8 @@ namespace Brickly.MODEL;
 public partial class DocumentType
 {
     [BsonId]
-    public ObjectId Id { get; set; } // MongoDB ObjectId
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? IdTypeDocument { get; set; }
     public string? Abbreviation { get; set; } // 'siglas' in Spanish
     public string? DocumentName { get; set; } // 'nombre_documento' in Spanish
 }

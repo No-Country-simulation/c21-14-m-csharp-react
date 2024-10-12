@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Brickly.DTO;
+using Brickly.DTO.Register;
 using Brickly.MODEL;
 
 namespace Brickly.UTILIY

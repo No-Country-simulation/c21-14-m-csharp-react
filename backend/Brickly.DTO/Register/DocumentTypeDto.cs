@@ -1,14 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Brickly.DTO.Validations;
+using System.ComponentModel.DataAnnotations;
+
 namespace Brickly.DTO.Register;
 
 public class DocumentTypeDto
 {
-    [Required(ErrorMessage = "La abreviatura es obligatoria.")]
-    [StringLength(10, ErrorMessage = "La abreviatura no puede exceder los 10 caracteres.")]
-    public string Abbreviation { get; set; } = string.Empty;
+    [Required(ErrorMessage = "Por favor, ingresa una abreviatura.")]
+    [StringLength(10, ErrorMessage = "La abreviatura no puede tener más de 10 caracteres.")]
+    [CustomValidations.OnlyLetters(ErrorMessage = "La abreviatura solo debe contener letras.")]
+    public string? Abbreviation { get; set; }
 
-    [Required(ErrorMessage = "El nombre del documento es obligatorio.")]
-    [StringLength(100, ErrorMessage = "El nombre del documento no puede exceder los 100 caracteres.")]
-    public string DocumentName { get; set; } = string.Empty;
+    [Required(ErrorMessage = "Por favor, ingresa el nombre del documento.")]
+    [StringLength(100, ErrorMessage = "El nombre del documento no puede tener más de 100 caracteres.")]
+    [CustomValidations.OnlyLetters(ErrorMessage = "El nombre del documento solo debe contener letras.")]
+    public string? DocumentName { get; set; }
 }
 

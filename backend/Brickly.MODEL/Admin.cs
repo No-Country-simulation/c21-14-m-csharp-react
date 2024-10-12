@@ -1,17 +1,22 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using Brickly.Attributes;
 
 namespace Brickly.MODEL;
 
+[CollectionName("admins")]
 public partial class Admin
 {
-    public ObjectId Id { get; set; }
-    public ObjectId DocumentTypeId { get; set; } // Reference to DocumentType
-    public string? DocumentNumber { get; set; } // 'numero_documento' in Spanish
-    public string? FirstName { get; set; } // 'nombre' in Spanish
-    public string? LastName { get; set; } // 'apellido' in Spanish
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? IdAdmin { get; set; }
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? DocumentTypeId { get; set; }
+    public string? DocumentNumber { get; set; } 
+    public string? FirstName { get; set; } 
+    public string? LastName { get; set; } 
     public string? Email { get; set; }
-    public string? Phone { get; set; } // 'telefono' in Spanish
+    public string? Phone { get; set; } 
     public string? Password { get; set; }
 }
 

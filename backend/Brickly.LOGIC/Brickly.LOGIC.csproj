@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Brickly.DAL\Brickly.DAL.csproj" />
     <ProjectReference Include="..\Brickly.DTO\Brickly.DTO.csproj" />
     <ProjectReference Include="..\Brickly.MODEL\Brickly.MODEL.csproj" />

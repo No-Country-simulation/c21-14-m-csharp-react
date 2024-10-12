@@ -111,6 +111,7 @@ namespace Brickly.LOGIC.Services
                 throw new ApplicationException("Ocurrió un error al obtener el tipo de documento. " + ex.Message);
             }
         }
+      
         /// <summary>
         /// Actualiza un tipo de documento existente.
         /// </summary>

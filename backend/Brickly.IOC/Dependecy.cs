@@ -8,6 +8,7 @@ using Brickly.LOGIC.Services.Contract.DocumentTypeService;
 using Brickly.LOGIC.Services;
 using Brickly.MODEL;
 using Brickly.DAL.DbContext;
+using Brickly.LOGIC.Services.Contract.AdminService;
 
 
 namespace Brickly.IOC
@@ -48,6 +49,7 @@ namespace Brickly.IOC
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             services.AddScoped<IDocumentTypeService, DocumentTypeService>();
+            services.AddScoped<IAdminService, AdminService>();
 
             // Registrar AutoMapper
             services.AddAutoMapper(typeof(AutoMapperProfile));

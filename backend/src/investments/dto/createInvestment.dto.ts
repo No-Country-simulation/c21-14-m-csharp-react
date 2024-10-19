@@ -1,14 +1,9 @@
-import { IsInt, IsDateString } from 'class-validator'
+import { IsInt, IsDateString, IsOptional } from 'class-validator'
 
 export class CreateInvestmentDto {
-  @IsInt()
-  propertyId: number
-
-  @IsInt()
-  userId: number
-
   @IsDateString()
-  date: string
+  @IsOptional()
+  date?: string
 
   @IsInt()
   amount: number

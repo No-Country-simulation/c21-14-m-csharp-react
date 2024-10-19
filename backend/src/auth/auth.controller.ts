@@ -1,5 +1,5 @@
-import { Body, Controller, Get, Headers, Patch, Post, UseGuards } from '@nestjs/common'
-import { Request } from 'express'
+import { Body, Controller, Get, HttpCode, Post, Put } from '@nestjs/common'
+
 import { ActiveUser } from '@/common/decorators/active-user.decorator'
 import { UserActiveInterface } from '@/common/interfaces/user-active.interface'
 import { AuthService } from './auth.service'
@@ -21,6 +21,7 @@ export class AuthController {
   }
 
   @Post('login')
+  @HttpCode(200)
   login(
     @Body()
     loginDto: LoginDto,
@@ -42,7 +43,7 @@ export class AuthController {
     return this.authService.getProfile(user)
   }
 
-  @Patch('profile')
+  @Put('profile')
   @Auth('user')
   updateProfile(@ActiveUser() user: UserActiveInterface, @Body() updateUserDto: UpdateUserDto) {
     return this.authService.updateProfile(user, updateUserDto)

@@ -49,7 +49,7 @@ model Property {
   city            String
   location        String
   description     String
-  minAmount       String
+  minAmount       Int
   area            Int
   time            Int
   profit          Int

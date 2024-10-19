@@ -61,7 +61,6 @@ export class AuthService {
     return {
       token,
       email: user.email,
-      role: 'user',
     }
   }
 
@@ -82,7 +81,6 @@ export class AuthService {
     return {
       token,
       email: admin.email,
-      role: 'admin',
     }
   }
 
@@ -97,10 +95,17 @@ export class AuthService {
   }
 
   async updateProfile(user: UserActiveInterface, updateUser: UpdateUserDto) {
+    if (Object.keys(updateUser).length === 0) {
+      throw new BadRequestException('No data provided to update the user')
+    }
     const userFind = await this.usersService.findOneByEmail(user.email)
     if (!userFind) {
       return new NotFoundException('User not found')
     }
-    return this.usersService.update(userFind.id, updateUser)
+    const updatedUser = await this.usersService.update(userFind.id, updateUser)
+
+    const { id, createdAt, updatedAt, password, ...userProfile } = updatedUser
+
+    return userProfile
   }
 }

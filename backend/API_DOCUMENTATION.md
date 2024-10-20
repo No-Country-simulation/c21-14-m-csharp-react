@@ -16,6 +16,14 @@
     "activityLevel": "active",// (opcional) Nivel de actividad física
     "goal": "lose weight"      // (opcional) Meta de fitness
   }
+  {
+  "name": "John Doe",
+  "email": "johndkkloe@example.com",
+  "password": "password123",
+  "phone": "+1124565",             
+  "country": "USA",              
+  "documentId": "hjkhk"
+}
   ```
 - **Respuesta exitosa (200)**:
   ```json

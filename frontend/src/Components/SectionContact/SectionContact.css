@@ -1,0 +1,31 @@
+.c_SectionContact{
+   
+    max-width: 900px;
+    margin: 0 auto;
+    padding:60px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+.c_SectionContact input[type='file']{
+    display: none;
+
+}
+.c_SectionContact .upload-file{
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #D9D9D94D;
+    color: #0E0F22;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.c_SectionContact .upload-file:hover{
+    background-color: #3f24244d;
+}
+.c_SectionContact button{
+
+    display: flex;
+   justify-content: center;
+}

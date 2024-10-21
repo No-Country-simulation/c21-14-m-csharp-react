@@ -1,0 +1,17 @@
+.location-map {
+    background-color: white;
+    padding:0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #0052cc;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .mapswrapper iframe{border:none;position:relative;z-index:2}
+  .mapswrapper{background:#fff;position:relative}

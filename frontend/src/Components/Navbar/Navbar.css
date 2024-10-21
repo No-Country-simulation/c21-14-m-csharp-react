@@ -1,0 +1,14 @@
+.c_navbar{
+
+    background: #E7EDF5;
+    border-bottom-right-radius: 60px;
+    width: 100%;
+}
+.c_navbar button{
+    background: #0C49B0;
+    color: white;
+}
+.c_navbar a{
+    padding-right: 30px !important;
+    color:#0C49B0;
+}

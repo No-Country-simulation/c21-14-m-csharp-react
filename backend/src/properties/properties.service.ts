@@ -1,18 +1,28 @@
 import { PrismaService } from '@/prisma/prisma.service'
-import { BadRequestException, Injectable } from '@nestjs/common'
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common'
 import { CreatePropertyDto } from './dto/createProperty.dto'
 import { UpdatePropertyDto } from './dto/updateProperty.dto'
 import { UserActiveInterface } from '@/common/interfaces/user-active.interface'
 import { AdminService } from '@/admin/admin.service'
+import { Type } from '@prisma/client'
+import { UsersService } from '@/users/users.service'
 
 @Injectable()
 export class PropertiesService {
   constructor(
     private prisma: PrismaService,
     private adminService: AdminService,
+    private userService: UsersService,
   ) {}
 
-  findAll(name?: string, country?: string) {
+  findAll(name?: string, country?: string, type?: string, status?: string, minAmount?: number) {
+    const validTypes = Object.values(Type)
+    if (type && !validTypes.includes(Type[type])) {
+      throw new BadRequestException(
+        `Invalid property type: ${type}. Must be: residential, commercial or industrial`,
+      )
+    }
+
     return this.prisma.property.findMany({
       where: {
         ...(name && {
@@ -27,6 +37,22 @@ export class PropertiesService {
             mode: 'insensitive',
           },
         }),
+        ...(type && {
+          type: {
+            equals: Type[type],
+          },
+        }),
+        ...(status && {
+          status: {
+            contains: status,
+            mode: 'insensitive',
+          },
+        }),
+        ...(minAmount && {
+          minAmount: {
+            gte: minAmount,
+          },
+        }),
       },
     })
   }
@@ -37,6 +63,28 @@ export class PropertiesService {
 
   propertyByName(name: string) {
     return this.prisma.property.findUnique({ where: { name } })
+  }
+
+  async getFavorite(email: string) {
+    const { id } = await this.userService.findOneByEmail(email)
+    return this.prisma.favorite.findMany({ where: { userId: id }, include: { property: true } })
+  }
+
+  async addFavorite(email: string, propertyId: number) {
+    const { id } = await this.userService.findOneByEmail(email)
+    return this.prisma.favorite.create({ data: { userId: id, propertyId } })
+  }
+
+  async deleteFavorite(email: string, propertyId: number) {
+    const { id } = await this.userService.findOneByEmail(email)
+    const favorite = await this.prisma.favorite.findMany({
+      where: { userId: { equals: id }, propertyId: { equals: propertyId } },
+    })
+    if (favorite.length === 0) {
+      throw new NotFoundException('favorite not found')
+    }
+
+    return this.prisma.favorite.delete({ where: { id: favorite[0].id } })
   }
 
   async createProperty(user: UserActiveInterface, createPropertyDto: CreatePropertyDto) {

@@ -1,6 +1,7 @@
 .c-mexico {
     display: flex;
     gap: 40px;
+    z-index: 3;
 }
 .c-mexico  .card{
     border: 1px solid #082E70;
@@ -23,4 +24,5 @@
     margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 20px;
+   
 }

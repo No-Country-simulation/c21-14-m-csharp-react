@@ -1,7 +1,7 @@
-
+/*control +f2*/
 .c_project h2{
  color: #0C49B0;
- margin-top: 2%;
+ margin-top: 4%;
  margin-bottom: 2rem;
  display: grid;
 grid-template-areas: overlap;
@@ -15,7 +15,8 @@ grid-template-areas: overlap;
     margin-left:auto;
     margin-right: auto;
     padding: 3rem 2rem 2rem 0rem;
-    
+  
+    z-index: 44444;
 
 }
 .c_project .menu a{
@@ -46,10 +47,10 @@ text-align: center;
     border-radius: 28px;
 }
 .c_project .cards{
-
+position: relative;
     background-color: #E7EDF5;
     padding: 7vw;
     margin-top: -100px;
-    z-index: -999;
+    
 
 }

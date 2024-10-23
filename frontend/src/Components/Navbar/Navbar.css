@@ -4,7 +4,7 @@
     border-bottom-right-radius: 60px;
     width: 100%;
 }
-.c_navbar button{
+.c_navbar .btn{
     background: #0C49B0;
     color: white;
 }

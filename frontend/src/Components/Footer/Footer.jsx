@@ -13,9 +13,9 @@ export const Footer = () => {
       <p>Santiago, Chile</p>
     </div>
     <div className="social-icons float-start pb-5 ">
-      <span className="icon"><i class="fa-brands fa-facebook-f"></i></span>
-      <span className="icon"><i class="fa-brands fa-instagram"></i></span>
-      <span className="icon"><i class="fa-brands fa-linkedin-in"></i></span>
+      <span className="icon"><i className="fa-brands fa-facebook-f"></i></span>
+      <span className="icon"><i className="fa-brands fa-instagram"></i></span>
+      <span className="icon"><i className="fa-brands fa-linkedin-in"></i></span>
     </div>
   </div>
   )

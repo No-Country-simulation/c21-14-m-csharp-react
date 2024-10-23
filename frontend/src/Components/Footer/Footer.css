@@ -1,0 +1,40 @@
+
+.footer {
+    background-color: #0052cc;
+    color: white;
+    padding:5px 16px;
+    margin: 0;
+    position: absolute;
+   top: calc(min-height-20px);
+    width: 100%;
+  }
+  
+
+  .contact-info h3 {
+    margin: 10px;
+    font-size: 16px;
+  }
+  
+  .contact-info p {
+    margin: 4px 0 0;
+    font-size: 14px;
+  }
+  
+  .social-icons {
+    display: flex;
+  }
+  
+  .icon {
+    margin-left: 8px;
+    font-size: 18px;
+  }
+  
+  .office-info {
+    text-align: right;
+    font-size: 12px;
+    padding-right: 30px;
+  }
+  
+  .office-info p {
+    margin: 2px 0;
+  } 

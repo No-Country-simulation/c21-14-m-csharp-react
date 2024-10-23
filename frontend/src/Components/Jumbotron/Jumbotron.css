@@ -1,0 +1,27 @@
+.c_jumbotron{
+    height: 100%;
+    width: 100%;
+padding-top: 25%;
+}
+.c_jumbotron h2{
+    font-size: 4rem;
+    color: white;
+    margin: 0 auto;
+    
+}
+.c_jumbotron h2:nth-child(even){
+    
+    margin-bottom: 40px;
+}
+.c_jumbotron button{
+    margin-top: 10px;
+    background: #0C49B0;
+    color: white;
+}
+.c_jumbotron button:hover{
+    background: #3971d3;
+    color: white;
+}
+.c_jumbotron .contenerdorJumbo{
+    padding-bottom: 7%;
+}

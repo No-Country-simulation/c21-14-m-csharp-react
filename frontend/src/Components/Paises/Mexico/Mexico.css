@@ -1,0 +1,28 @@
+.c-mexico {
+    display: flex;
+    gap: 40px;
+    z-index: 3;
+}
+.c-mexico  .card{
+    border: 1px solid #082E70;
+    margin: 0 auto;
+
+}
+.c-mexico  h2{
+    margin-bottom: 7px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+.c-mexico  h3{
+    font-weight: 700;
+    font-size: 1rem;
+    padding-bottom: -18px;
+}
+.c-mexico button{
+    background: #0C49B0;
+    width: 90%;   
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+   
+}

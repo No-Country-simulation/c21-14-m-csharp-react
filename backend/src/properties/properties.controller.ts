@@ -34,14 +34,14 @@ export class PropertiesController {
   @Auth('user')
   @Get('favorites')
   async getFavorite(@ActiveUser() user: UserActiveInterface) {
-    return this.propertyService.getFavorite(user.email)
+    return this.propertyService.getFavorites(user.email)
   }
 
   @Auth('user')
   @Post('favorites/:id')
   async addFavorite(
     @ActiveUser() user: UserActiveInterface,
-    @Param('id') @Param('id', ParseIntPipe) propertyId: number,
+    @Param('id', ParseIntPipe) propertyId: number,
   ) {
     return this.propertyService.addFavorite(user.email, propertyId)
   }
@@ -50,9 +50,9 @@ export class PropertiesController {
   @Delete('favorites/:id')
   async deleteFavorite(
     @ActiveUser() user: UserActiveInterface,
-    @Param('id') @Param('id', ParseIntPipe) propertyId: number,
+    @Param('id', ParseIntPipe) propertyId: number,
   ) {
-    return this.propertyService.deleteFavorite(user.email, propertyId)
+    return this.propertyService.removeFavorite(user.email, propertyId)
   }
 
   @Get(':id')

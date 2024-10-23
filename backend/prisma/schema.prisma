@@ -79,7 +79,7 @@ model Investment {
 }
 
 model Favorite {
-  id              Int      @id @default(autoincrement())
+  @@id([userId, propertyId])
   userId          Int
   user            User @relation(fields: [userId], references: [id])
   propertyId      Int 

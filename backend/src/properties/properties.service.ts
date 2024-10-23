@@ -65,26 +65,71 @@ export class PropertiesService {
     return this.prisma.property.findUnique({ where: { name } })
   }
 
-  async getFavorite(email: string) {
+  async getFavorite(userId: number, propertyId: number) {
+    return this.prisma.favorite.findUnique({
+      where: {
+        userId_propertyId: {
+          userId,
+          propertyId,
+        },
+      },
+    })
+  }
+
+  async getFavorites(email: string) {
     const { id } = await this.userService.findOneByEmail(email)
-    return this.prisma.favorite.findMany({ where: { userId: id }, include: { property: true } })
+
+    return this.prisma.favorite.findMany({
+      where: {
+        userId: id,
+      },
+    })
   }
 
   async addFavorite(email: string, propertyId: number) {
     const { id } = await this.userService.findOneByEmail(email)
-    return this.prisma.favorite.create({ data: { userId: id, propertyId } })
-  }
+    const existingFavorite = await this.getFavorite(id, propertyId)
 
-  async deleteFavorite(email: string, propertyId: number) {
-    const { id } = await this.userService.findOneByEmail(email)
-    const favorite = await this.prisma.favorite.findMany({
-      where: { userId: { equals: id }, propertyId: { equals: propertyId } },
-    })
-    if (favorite.length === 0) {
-      throw new NotFoundException('favorite not found')
+    if (existingFavorite) {
+      throw new BadRequestException('Property already in your favorites')
     }
 
-    return this.prisma.favorite.delete({ where: { id: favorite[0].id } })
+    const existingProperty = await this.propertyById(propertyId)
+
+    if (!existingProperty) {
+      throw new BadRequestException(`Property with id ${propertyId} does not exist`)
+    }
+
+    return this.prisma.favorite.create({
+      data: {
+        userId: id,
+        propertyId: propertyId,
+      },
+    })
+  }
+
+  async removeFavorite(email: string, propertyId: number) {
+    const { id } = await this.userService.findOneByEmail(email)
+    const existingFavorite = await this.getFavorite(id, propertyId)
+
+    if (!existingFavorite) {
+      throw new BadRequestException('The property does not exist in your favorites')
+    }
+
+    const existingProperty = await this.propertyById(propertyId)
+
+    if (!existingProperty) {
+      throw new BadRequestException(`Property with id: ${propertyId} does not exist`)
+    }
+
+    return this.prisma.favorite.delete({
+      where: {
+        userId_propertyId: {
+          userId: id,
+          propertyId: propertyId,
+        },
+      },
+    })
   }
 
   async createProperty(user: UserActiveInterface, createPropertyDto: CreatePropertyDto) {

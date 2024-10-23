@@ -26,6 +26,7 @@ model User {
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt @default(now())
   investments     Investment[]
+  favorites       Favorite[]
 }
 
 model Admin {
@@ -58,10 +59,11 @@ model Property {
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
   investments     Investment[]
+  favorites       Favorite[]
 }
 
 enum Type {
-  residencial
+  residential
   commercial
   industrial
 }
@@ -76,7 +78,13 @@ model Investment {
   amount          Int 
 }
 
-
+model Favorite {
+  @@id([userId, propertyId])
+  userId          Int
+  user            User @relation(fields: [userId], references: [id])
+  propertyId      Int 
+  property        Property  @relation(fields: [propertyId], references: [id])
+}
 
 
 

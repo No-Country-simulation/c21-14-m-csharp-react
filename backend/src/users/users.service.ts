@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common'
+import { BadRequestException, Injectable } from '@nestjs/common'
 import { CreateUserDto } from './dto/create-user.dto'
 import { UpdateUserDto } from './dto/update-user.dto'
 import { PrismaService } from '@/prisma/prisma.service'
@@ -39,6 +39,18 @@ export class UsersService {
         email: true,
       },
     })
+  }
+
+  async findDuplicate({ email, phone }: { email: string; phone: string }) {
+    const userEmail = await this.prisma.user.findUnique({ where: { email } })
+    const userPhone = await this.prisma.user.findUnique({ where: { phone } })
+
+    if (userEmail) {
+      throw new BadRequestException('Email already exist')
+    }
+    if (userPhone) {
+      throw new BadRequestException('Phone already exist')
+    }
   }
 
   findOne(id: number) {

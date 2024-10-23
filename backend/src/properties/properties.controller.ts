@@ -16,14 +16,43 @@ import { Auth } from '@/auth/decorators/auth.decorator'
 import { UserActiveInterface } from '@/common/interfaces/user-active.interface'
 import { ActiveUser } from '@/common/decorators/active-user.decorator'
 
-@Auth('user')
 @Controller('properties')
 export class PropertiesController {
   constructor(private readonly propertyService: PropertiesService) {}
 
   @Get()
-  async getAllProperties(@Query('name') name: string, @Query('country') country: string) {
-    return this.propertyService.findAll(name, country)
+  async getAllProperties(
+    @Query('name') name: string,
+    @Query('country') country: string,
+    @Query('type') type: string,
+    @Query('status') status: string,
+    @Query('minamount') minAmount: number,
+  ) {
+    return this.propertyService.findAll(name, country, type, status, minAmount)
+  }
+
+  @Auth('user')
+  @Get('favorites')
+  async getFavorite(@ActiveUser() user: UserActiveInterface) {
+    return this.propertyService.getFavorites(user.email)
+  }
+
+  @Auth('user')
+  @Post('favorites/:id')
+  async addFavorite(
+    @ActiveUser() user: UserActiveInterface,
+    @Param('id', ParseIntPipe) propertyId: number,
+  ) {
+    return this.propertyService.addFavorite(user.email, propertyId)
+  }
+
+  @Auth('user')
+  @Delete('favorites/:id')
+  async deleteFavorite(
+    @ActiveUser() user: UserActiveInterface,
+    @Param('id', ParseIntPipe) propertyId: number,
+  ) {
+    return this.propertyService.removeFavorite(user.email, propertyId)
   }
 
   @Get(':id')

@@ -83,10 +83,6 @@ export class InvestmentService {
   }
 
   async deleteInvestment(id: number) {
-    const propertyFound = await this.propertiesService.propertyById(id)
-    if (!propertyFound) {
-      throw new NotFoundException(`Property with ID ${id} does not exist`)
-    }
     return this.prisma.investment.delete({ where: { id } })
   }
 }

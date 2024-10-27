@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
+import { Navbar } from '../Navbar/Navbar';
+import { Footer } from '../Footer/Footer';
+import AsideLeft from '../AsideLeft/AsideLeft ';
+
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -39,31 +43,52 @@ export const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      {success && <div style={{ color: 'green' }}>{success}</div>}
-    </div>
+    <>
+   <Navbar login={"login"} size={"navbar-brand col-10 "}/> 
+   <div className='d-flex justify-content-between col-12'>
+       <AsideLeft/>
+  
+      
+                 <form className="login-container main-content col-6">
+                      <h1 className=" font-bold text-2xl mb-16">INICIAR SESION</h1>
+
+                      <label htmlFor="email" className="text-black font-bold mb-2 block text-sm">
+                      ¿Cuál es tu correo electrónico?
+                      </label>
+                      <input
+                        type="email"
+
+                        className="p-3 rounded block mb-2 border text-slate-300 w-full"
+                        placeholder="Ejemplo: tu@correo.com"
+                      />
+
+
+
+                      <label htmlFor="password" className="text-black font-bold mt-6 mb-2 block text-sm">
+                      Contraseña
+                      </label>
+                      <input
+                        type="password"
+
+                        className="p-3 rounded block mb-2 border text-slate-300 w-full"
+                        placeholder="Escribe tu contraseña "
+                      />
+
+
+
+                      <button className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14">
+                        Entrar
+                      </button>
+                      <small className="mt-36 block text-center"> ¿No tienes una cuenta brickly? <a  className=" px-1 rounded-md text-trueGray-500 " href="/auth/register">Registrate aquí</a> </small>
+
+                      </form>
+
+          {error && <div style={{ color: 'red' }}>{error}</div>}
+          {success && <div style={{ color: 'green' }}>{success}</div>}
+       </div>
+  
+<Footer/>
+    </>
   );
 };
 

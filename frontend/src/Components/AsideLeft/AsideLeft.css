@@ -1,0 +1,14 @@
+/* src/components/AsideLeft.css */
+.aside-left {
+    width: 591px;
+    height: 64vh;
+    color: white;
+    padding: 57px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 73px;
+    z-index: 1;
+    background-image: url(/public/img/d_1.jpg);
+    display: block;
+}
+

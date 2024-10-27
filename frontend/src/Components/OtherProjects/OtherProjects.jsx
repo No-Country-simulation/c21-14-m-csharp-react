@@ -37,7 +37,9 @@ function OtherProjects() {
                         </div>
                     </div>
                 ))}
+               
             </div>
+            <button className='btn-verMas mx-auto'>Ver más</button>
         </div>
     );
 }

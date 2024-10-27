@@ -6,6 +6,7 @@ import img2 from '../../assets/o_2.png';
 import img3 from '../../assets/o_3.jpg';
 import img4 from '../../assets/o_4.png';
 import img5 from '../../assets/o_5.jpg';
+import PropertyFilter from '../PropertyFilter/PropertyFilter';
 
 function OtherProjects() {
     const projects = [
@@ -23,6 +24,7 @@ function OtherProjects() {
     return (
         <div className="project-gallery  m-auto ">
             <h1>Otros proyectos para invertir</h1>
+            <PropertyFilter/>
             <div className="projects-grid py-5">
                 {projects.map((project, index) => (
                     <div className="project-card" key={index}>

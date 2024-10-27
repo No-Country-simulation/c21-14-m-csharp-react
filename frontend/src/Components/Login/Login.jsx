@@ -29,6 +29,7 @@ export const Login = () => {
       });
 
       if (response.ok) {
+        
         const data = await response.json();
         setSuccess('Login successful!');
         console.log('Login successful:', data);
@@ -45,22 +46,22 @@ export const Login = () => {
   return (
     <>
    <Navbar login={"login"} size={"navbar-brand col-10 "}/> 
-   <div className='d-flex justify-content-between col-12'>
-       <AsideLeft/>
-  
-      
-                 <form className="login-container main-content col-6">
+      <div className='d-flex justify-content-between col-12'>
+          <AsideLeft/>
+                 <form onSubmit={handleSubmit} className="login-container main-content col-6">
                       <h1 className=" font-bold text-2xl mb-16">INICIAR SESION</h1>
 
                       <label htmlFor="email" className="text-black font-bold mb-2 block text-sm">
                       ¿Cuál es tu correo electrónico?
                       </label>
-                      <input
-                        type="email"
-
-                        className="p-3 rounded block mb-2 border text-slate-300 w-full"
-                        placeholder="Ejemplo: tu@correo.com"
-                      />
+                            <input
+                            type="email"
+                            value={email}
+                            className="p-3 rounded block mb-2 border text-slate-300 w-full"
+                            placeholder="Ejemplo: tu@correo.com"
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                          />
 
 
 
@@ -72,16 +73,19 @@ export const Login = () => {
 
                         className="p-3 rounded block mb-2 border text-slate-300 w-full"
                         placeholder="Escribe tu contraseña "
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
                       />
 
 
 
-                      <button className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14">
+                      <button type="submit" className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14">
                         Entrar
                       </button>
                       <small className="mt-36 block text-center"> ¿No tienes una cuenta brickly? <a  className=" px-1 rounded-md text-trueGray-500 " href="/auth/register">Registrate aquí</a> </small>
 
-                      </form>
+                </form>
 
           {error && <div style={{ color: 'red' }}>{error}</div>}
           {success && <div style={{ color: 'green' }}>{success}</div>}

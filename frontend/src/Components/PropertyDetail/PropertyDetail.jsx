@@ -6,11 +6,27 @@ import LocationMap from '../LocationMap/LocationMap'
 import { Property } from '../Property/Property'
 
 export const PropertyDetail = () => {
+    const images = [
+        "https://via.placeholder.com/150/0000FF",
+        "https://via.placeholder.com/150/FF0000",
+        "https://via.placeholder.com/150/00FF00",
+        "https://via.placeholder.com/150/FFFF00",
+        "https://via.placeholder.com/150/FF00FF"
+    ];
   return (
     <>
     <Navbar/>
+    <div className="container-fluid">
+            <div className="row">
+                <Property 
+                    title="Card Title 1"
+                    text="Some quick example text to build on the card title and make up the bulk of the card's content."
+                    images={images}
+                />
+            </div>
+        </div>
+
     <LocationMap/>
-    <Property/>
     <Footer/>
     </>
   )

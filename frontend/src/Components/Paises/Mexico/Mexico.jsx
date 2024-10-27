@@ -39,7 +39,7 @@ export const Mexico = () => {
       propiedad.map(user=>{
         return (
 <>
-<div className='card p-1 ' key={user.id}>
+         <div className='card p-1 ' key={user.id}>
             <h2>{user.name}</h2>
             <img src={user.img} alt=" " />
             <h3 className='pt-3'>Precio de inversión:</h3>

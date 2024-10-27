@@ -2,7 +2,7 @@
     background-color: white;
     padding:0;
     font-family: Arial, sans-serif;
-    margin: -6px;
+   margin-bottom: -40px;
   }
   
   .header {
@@ -13,6 +13,7 @@
     margin: 0;
     font-size: 18px;
     font-weight: bold;
+    width: 99.9%;
   }
   
   .mapswrapper iframe{border:none;position:relative;z-index:2}

@@ -1,0 +1,57 @@
+
+.project-gallery {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+ 
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 61px;
+    padding: 126px;
+}
+
+.project-card {
+   
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #0056b3;
+}
+
+.project-card img {
+    max-width: 100%;
+ 
+}
+
+.project-card h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.project-card .price {
+    color: green;
+    font-weight: bold;
+}
+
+.project-card .description {
+    color: #555;
+    font-size: 0.9em;
+}
+
+.project-card button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.project-card button:hover {
+    background-color: #0056b3;
+}

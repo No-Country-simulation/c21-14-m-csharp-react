@@ -4,6 +4,7 @@ import {Navbar} from '../Navbar/Navbar'
 import {Footer} from '../Footer/Footer'
 import LocationMap from '../LocationMap/LocationMap'
 import { Property } from '../Property/Property'
+import OtherProjects from '../OtherProjects/OtherProjects'
 
 export const PropertyDetail = () => {
     const images = [
@@ -25,7 +26,9 @@ export const PropertyDetail = () => {
                 />
             </div>
         </div>
-
+        
+    <hr className='m-auto'/>
+    <OtherProjects/>
     <LocationMap/>
     <Footer/>
     </>

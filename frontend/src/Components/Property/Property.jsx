@@ -25,8 +25,8 @@ const propiedad=[
 export const Property = () => {
  
   return (
-    <div className="property-listing fs-4 px-4">
-        <div className='d-flex justify-content-between p-5' style={{color:'#0C49B0'}}>
+    <div className="property-listing fs-4 px-3">
+        <div className='d-flex justify-content-between p-3' style={{color:'#0C49B0'}}>
             <div>
                 <p>Mexico</p>
                 <h2 className='fw-bold fs-2'>Nexo Comercial</h2>

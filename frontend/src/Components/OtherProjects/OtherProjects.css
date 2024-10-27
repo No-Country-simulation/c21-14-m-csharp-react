@@ -2,7 +2,7 @@
 .project-gallery {
     font-family: Arial, sans-serif;
     padding: 20px;
- 
+
 }
 
 .projects-grid {
@@ -13,10 +13,10 @@
 }
 
 .project-card {
-   
+ 
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding-bottom: 10px;
     text-align: center;
     border-radius: 20px;
     border: 1px solid #0056b3;
@@ -24,9 +24,16 @@
 
 .project-card img {
     max-width: 100%;
- 
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
-
+.project-card .project-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .project-card h2 {
     font-size: 1.2em;
     margin: 10px 0;
@@ -50,6 +57,9 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 0 auto;
+    position: relative;
+    bottom: 0;
 }
 
 .project-card button:hover {

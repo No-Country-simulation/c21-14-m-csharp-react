@@ -13,8 +13,12 @@
     margin: 0;
     font-size: 18px;
     font-weight: bold;
-    width: 99.9%;
+    width: 100%;
   }
-  
+  iframe{
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
   .mapswrapper iframe{border:none;position:relative;z-index:2}
   .mapswrapper{background:#fff;position:relative}

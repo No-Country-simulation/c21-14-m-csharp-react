@@ -11,11 +11,11 @@ function OtherProjects() {
     const projects = [
         { name: 'Lago del Sol', price: '$30,200.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img1 },
         { name: 'La Hacienda Imperial', price: '$1,560.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img2 },
-        { name: 'Villas del Sol', price: '$12,345.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img3},
-        { name: 'TechnoPark Residencial', price: '$4,030.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img4 },
+        { name: 'Villas del Sol', price: '$12,345.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img1},
+        { name: 'TechnoPark Residencial', price: '$4,030.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img1 },
         { name: 'Montecarlo Suites', price: '$500,020.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img5 },
-        { name: 'Villas del Sol', price: '$12,345.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img3},
-        { name: 'TechnoPark Residencial', price: '$4,030.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img4 },
+        { name: 'Villas del Sol', price: '$12,345.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img5},
+        { name: 'La Hacienda Imperial', price: '$1,560.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sihjjhjkjkt amgh h h gdfh fgh ghd h fhfgh fhffhet...', image: img2 }, 
         { name: 'Montecarlo Suites', price: '$500,020.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img5 }
    
         ];
@@ -27,10 +27,12 @@ function OtherProjects() {
                 {projects.map((project, index) => (
                     <div className="project-card" key={index}>
                         <img src={project.image} alt={project.name} />
-                        <h2>{project.name}</h2>
-                        <p className="price">Precio de inversión: {project.price}</p>
-                        <p className="description">{project.description}</p>
-                        <button>Ver más</button>
+                        <div className='project-block'>
+                            <h2>{project.name}</h2>
+                            <p className="price">Precio de inversión: {project.price}</p>
+                            <p className="description">{project.description}</p>
+                            <button>Ver más</button>
+                        </div>
                     </div>
                 ))}
             </div>

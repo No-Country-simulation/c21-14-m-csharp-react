@@ -4,14 +4,13 @@
     color: white;
     padding:5px 16px;
     margin: 0;
-    position: absolute;
-   top: calc(min-height-20px);
+    height: 197px;
     width: 100%;
   }
   
 
   .contact-info h3 {
-    margin: 10px;
+    padding-top: 50px;
     font-size: 16px;
   }
   
@@ -22,6 +21,7 @@
   
   .social-icons {
     display: flex;
+    padding: 0;
   }
   
   .icon {

@@ -12,7 +12,7 @@ export const Footer = () => {
       <p>Av. La Paz</p>
       <p>Santiago, Chile</p>
     </div>
-    <div className="social-icons float-start pb-5 ">
+    <div className="social-icons float-start ">
       <span className="icon"><i className="fa-brands fa-facebook-f"></i></span>
       <span className="icon"><i className="fa-brands fa-instagram"></i></span>
       <span className="icon"><i className="fa-brands fa-linkedin-in"></i></span>

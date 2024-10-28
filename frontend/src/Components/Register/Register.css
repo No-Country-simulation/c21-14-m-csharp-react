@@ -1,18 +1,23 @@
 
 /* styles.css */
 .C_Register {
-    padding: 70px;
-    display: flex;
-    justify-content: center;
+
+    position: relative;
+    top: 80px;
+    left: -20px;
+    padding-bottom: 200px;
+    height: fit-content;
+    line-height: 23px;
 }
-.C_Register form {
-    max-width: 500px;
-  
-    padding: 1em;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.C_Register h1{
+    color: #0C49B0;
+    font-size: 28px;
+    text-align: center;
 }
+.C_Register b{
+    color: #48974E ;
+}
+
 
 .C_Register label {
     display: block;
@@ -21,22 +26,29 @@
 }
 
 .C_Register input {
+    line-height: 0px;
     width: 100%;
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+.inputSize{
+    width: 236px;
+}
 .C_Register button {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 50%;
     padding: 0.7em;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #DBD8D8;
+    color: black;
+    font-weight: 600;
     font-size: 1em;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .C_Register button:hover {
@@ -47,4 +59,9 @@
     text-align: center;
     font-size: 1em;
 }
-  
+.contenedorR{
+    height: 86vh;
+  }
+  .form-register{
+    width: 800px;
+  }

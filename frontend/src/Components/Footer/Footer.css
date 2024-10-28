@@ -2,9 +2,7 @@
 .footer {
   background-color: #0052cc;
   color: white;
-  padding: 5px 16px;
-  margin: 0;
-  height: 149px;
+  margin: 0; 
   width: 100%;
   z-index: 2;
 }
@@ -38,3 +36,22 @@
   .office-info p {
     margin: 2px 0;
   } 
+  @media (min-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .aside-left {
+        width: 50%;
+    }
+}
+
+/* Estilos para pantallas de escritorio */
+/*
+@media (min-width: 1024px) {
+  .footer {
+    background-color: black;
+  }
+
+}*/
+ 

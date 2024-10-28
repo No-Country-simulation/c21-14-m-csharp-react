@@ -15,7 +15,8 @@ export const Login = () => {
     e.preventDefault();
     setError('');
     setSuccess('');
-
+   
+  
     try {
       const response = await fetch('https://brickly-backend.onrender.com/api/v1/auth/login', {
         method: 'POST',
@@ -42,11 +43,12 @@ export const Login = () => {
       setError('An error occurred: ' + err.message);
     }
   };
-
+ 
   return (
+    
     <>
-   <Navbar login={"login"} size={"navbar-brand col-10 "}/> 
-      <div className='d-flex justify-content-between col-12'>
+   <Navbar  login={"login"} size={"navbar-brand col-2 "}/> 
+      <div className='contenedor d-flex  justify-content-between col-12 '>
           <AsideLeft/>
                  <form onSubmit={handleSubmit} className="login-container main-content col-6">
                       <h1 className=" font-bold text-2xl mb-16">INICIAR SESION</h1>
@@ -91,7 +93,10 @@ export const Login = () => {
           {success && <div style={{ color: 'green' }}>{success}</div>}
        </div>
   
-<Footer/>
+<Footer style={{    position: 'fixed',
+    bottom: '0',
+    padding:"0px 16px",
+    height:"140px",}}/>
     </>
   );
 };

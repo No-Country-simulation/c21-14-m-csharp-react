@@ -16,7 +16,7 @@ export const PropertyDetail = () => {
     ];
   return (
     <>
-    <Navbar/>
+    <Navbar home={"home"}/>
     <div className="container-fluid">
             <div className="row">
                 <Property 
@@ -30,7 +30,9 @@ export const PropertyDetail = () => {
     <hr className='m-auto'/>
     <OtherProjects/>
     <LocationMap/>
-    <Footer/>
+    <Footer style={{ 
+    padding:"40px 16px",
+    height:"190px",}}/>
     </>
   )
 }

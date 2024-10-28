@@ -1,14 +1,35 @@
 /* src/components/AsideLeft.css */
 .aside-left {
-    width: 591px;
-    height: 64vh;
+    width: 531px;
+    height: 90%;
     color: white;
-    padding: 57px;
+    padding: 7px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: relative;
     margin-top: 73px;
-    z-index: 1;
-    background-image: url(/public/img/d_1.jpg);
+    z-index: -1;
+    background-image: url(/src/assets/d_aside.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: block;
+    height: 730px;
 }
-
+/*1866*/
+@media (min-width: 1600px) {
+    .aside-left{
+        width: 531px;
+    
+    }
+  }
+  
+@media ( max-width: 1400px) {
+    
+    
+    .aside-left{
+       
+        width: 531px;
+        
+    }
+  }
+  

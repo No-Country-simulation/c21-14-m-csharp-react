@@ -34,7 +34,7 @@ export const Navbar = ({ isLoggedIn, home, login,register,size}) => {
          <a class="nav-link" href="#seccion1">Cómo funciona</a>
       </li>
       <li class="nav-item">
-             <Link className="nav-link " to="Login">Ingresar</Link>
+             <Link className="nav-link " to="/Login">Ingresar</Link>
       </li>
       <li class="nav-item">
              <Link className="btn btn-outline-primary" to="/Register">Crear cuenta</Link>
@@ -52,8 +52,8 @@ export const Navbar = ({ isLoggedIn, home, login,register,size}) => {
       register=="register" ?
       <>
       <ul className="navbar-nav mb-2  mb-lg-0 col-2">
-          <li className="nav-item">
-                <Link className="nav-link btn btn-outline-primary text-center pl-3" to="/Login">Ingresar</Link>
+          <li  className="nav-item">
+                <Link  className="nav-link btn  botonIngresar" to="/Login">Ingresar</Link>
           </li>
       </ul>
   </>

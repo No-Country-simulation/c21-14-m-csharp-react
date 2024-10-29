@@ -5,6 +5,7 @@ import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 import AsideLeft from '../AsideLeft/AsideLeft ';
 import { Portfolio } from '../Portfolio/Portfolio';
+import { ErrorLogin } from '../ErrorLogin/ErrorLogin';
 
 
 export const Login = () => {
@@ -39,7 +40,7 @@ export const Login = () => {
         if(data.email == "admin@gmail.com") return navigate('/');
   
       } else {
-        setError('Correo o Clave estan mal!!!');
+       navigate('/ErrorLogin');
       }
     } catch (err) {
       setError('An error occurred: ' + err.message);

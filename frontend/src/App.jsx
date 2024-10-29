@@ -8,6 +8,7 @@ import { Portfolio } from './Components/Portfolio/Portfolio.jsx';
 import { UserHome } from './Components/UserHome/UserHome.jsx';
 /*import {Tarjeta} from './Components/Tarjeta/Tarjeta.jsx';*/
 import React from 'react';
+import { ErrorLogin } from './Components/ErrorLogin/ErrorLogin.jsx';
 
 function App() {
 /*
@@ -45,6 +46,7 @@ function App() {
             <Route path='/Portfolio' element={<Portfolio />} />
             <Route path='/PropertyDetail' element={<PropertyDetail />} />
             <Route path='/UserHome' element={<UserHome />} />
+            <Route path='/ErrorLogin' element={<ErrorLogin />} />
 
           </Routes>
         </Router>

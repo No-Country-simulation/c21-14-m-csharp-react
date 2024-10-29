@@ -1,0 +1,19 @@
+.errorLogin{
+
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 110px;
+}
+.errorLogin a{
+    font-size: 34px;
+}
+.errorLogin h1{
+    color: red;
+    text-align: center;
+    width: 500px;
+}
+.errorLogin img{
+    height: 340px;
+}

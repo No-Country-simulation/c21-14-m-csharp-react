@@ -104,7 +104,7 @@ export const SectionContact = () => {
           </div>
           <div style={{ width: "30%" }}>
             <label className="upload-file" htmlFor="file">
-              <span> Sube tu título de propiedad</span>{" "}
+              <span> Sube tu propuesta de propiedad</span>{" "}
               <svg
                 width="39"
                 height="39"

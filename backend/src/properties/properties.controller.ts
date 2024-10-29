@@ -31,6 +31,11 @@ export class PropertiesController {
     return this.propertyService.findAll(name, country, type, status, minAmount)
   }
 
+  @Get('counts')
+  async getPropertyCounts() {
+    return this.propertyService.getPropertyCounts()
+  }
+
   @Auth('user')
   @Get('favorites')
   async getFavorite(@ActiveUser() user: UserActiveInterface) {

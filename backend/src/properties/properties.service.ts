@@ -57,6 +57,48 @@ export class PropertiesService {
     })
   }
 
+  async getPropertyCounts() {
+    const totalProperties = await this.prisma.property.count()
+
+    const countByType = await this.prisma.property.groupBy({
+      by: ['type'],
+      _count: {
+        type: true,
+      },
+    })
+
+    const countByStatus = await this.prisma.property.groupBy({
+      by: ['status'],
+      _count: {
+        status: true,
+      },
+    })
+
+    const oneWeekAgo = new Date()
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
+
+    const recentPropertyCount = await this.prisma.property.count({
+      where: {
+        createdAt: {
+          gte: oneWeekAgo,
+        },
+      },
+    })
+
+    return {
+      totalProperties,
+      recentPropertyCount,
+      countByType: countByType.map((item) => ({
+        type: item.type,
+        count: item._count.type,
+      })),
+      countByStatus: countByStatus.map((item) => ({
+        status: item.status,
+        count: item._count.status,
+      })),
+    }
+  }
+
   propertyById(id: number) {
     return this.prisma.property.findUnique({ where: { id } })
   }

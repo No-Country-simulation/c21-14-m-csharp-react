@@ -52,6 +52,7 @@ export class InvestmentService {
       },
       select: {
         amount: true,
+        date: true,
         investor: {
           select: { name: true },
         },

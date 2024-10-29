@@ -5,6 +5,7 @@ import AsideLeft from '../AsideLeft/AsideLeft ';
 import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 export const Register = () => {
     const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ export const Register = () => {
       profileUrl: '',
       confirmPassword: '',
     });
-  
+    const navigate = useNavigate();
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
   
@@ -98,6 +99,7 @@ export const Register = () => {
         }
         const result = await response.json();
         setMessage('¡Registro exitoso!');
+        navigate('/login')
         setError('');
       } catch (error) {
         setError('Hubo un problema con el registro.');
@@ -140,7 +142,7 @@ export const Register = () => {
                 Código del País:
                     <select
                     name="countryCode"
-                    className="text-center"
+                    className="text-center selectR"
                     value={formData.countryCode}
                     onChange={handleChange}
                     >

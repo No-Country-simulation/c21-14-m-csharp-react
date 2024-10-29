@@ -6,6 +6,8 @@
 .c-mexico  .card{
     border: 1px solid #082E70;
     margin: 0 auto;
+    height: inherit;
+    width: 25%;
 
 }
 .c-mexico  h2{
@@ -22,7 +24,7 @@
     background: #0C49B0;
     width: 90%;   
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 20px;
    
 }

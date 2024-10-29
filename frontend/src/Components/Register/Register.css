@@ -68,3 +68,8 @@ select{
   .form-register{
     width: 800px;
   }
+  .selectR{
+    padding: 10px;
+    padding-right: 60px;
+    border-radius: 10px;
+  }

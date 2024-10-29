@@ -61,7 +61,8 @@
     transition: background-color 0.3s;
     margin: 0 auto;
     position: relative;
-    bottom: 0;
+    bottom: 70;
+    left: 40px;
 }
 .btn-verMas{
     display: flex;
@@ -70,3 +71,12 @@
 .project-card button:hover {
     background-color: #0056b3;
 }
+
+
+ .card { position: relative; width: 300px; height: 450px; }
+.project-card .card-body { position: absolute; top: 40px; left: 0; width: 100%; height: 100%; overflow: hidden; } 
+ .card-title,  .card-text,.project-card .btnC { position: absolute; }
+ .card-title { top: 40px; left: 20px; } 
+.project-card .card-text { top: 10px; left: 20px; } 
+
+ .btnC { bottom: 80px; left: 30px; }

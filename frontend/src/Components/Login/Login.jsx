@@ -60,7 +60,7 @@ export const Login = () => {
       });
 
       if (response.ok) {
-        const data = await response.json();
+        const data = await response.json('https://brickly-backend.onrender.com/api/v1/auth/profile');
         setProfile(data);
         setDatos(data);
         navigate('/userHome', { state: { profile: data} }); // Passing profile data

@@ -12,21 +12,28 @@ export const UserHome = () => {
   const profile = location.state?.profile;
   return (
 <>
-<Navbar userHome={"userHome"} loggedIn={true}/>
+{/*<Navbar userHome={"userHome"} loggedIn={true}/>*/}
+
 <div>
 
       {" "}
       {profile ? (
-        <div>
-          {" "}
-          <h1>Profile Details</h1> <p>Name: {profile.name}</p>{" "}
-          <p>Email: {profile.email}</p> <p>Phone: {profile.phone}</p>{" "}
-          <p>Country: {profile.country}</p>{" "}
-          <p>Document ID: {profile.documentId}</p>{" "}
-          <p>Profile URL: {profile.profileUrl}</p>{" "}
+        <div className="container pt-5">
+                    <h1>Hola, {profile.name}!</h1>
+            <div className="d-flex justify-content-around align-item-center container m-5 inversiones pt-3">
+                <p>Monto disponible: $ </p>
+                <p>Proyectos:</p>
+                <p>Ganacias: $</p>
+            </div>
+                  {/*  {" "}
+                    <h1>Profile Details</h1> <p>Name: {profile.name}</p>{" "}
+                    <p>Email: {profile.email}</p> <p>Phone: {profile.phone}</p>{" "}
+                    <p>Country: {profile.country}</p>{" "}
+                    <p>Document ID: {profile.documentId}</p>{" "}
+                    <p>Profile URL: {profile.profileUrl}</p>{" "}*/}
         </div>
       ) : (
-        <div>No profile data available</div>
+        <div>No hay data del profil disponible</div>
       )}{" "}
     </div>
 

@@ -52,8 +52,8 @@ export const Navbar = ({ isLoggedIn, home, login,register,size}) => {
       register=="register" ?
       <>
       <ul className="navbar-nav mb-2  mb-lg-0 col-2">
-          <li  className="nav-item">
-                <Link  className="nav-link btn  botonIngresar" to="/Login">Ingresar</Link>
+          <li className="nav-item">
+                <Link className="nav-link btn btn-outline-primary" to="/Login">Ingresar</Link>
           </li>
       </ul>
   </>

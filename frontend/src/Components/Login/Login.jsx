@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState ,useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'
 import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 import AsideLeft from '../AsideLeft/AsideLeft ';
+import { Portfolio } from '../Portfolio/Portfolio';
 
 
 export const Login = () => {
@@ -12,12 +13,16 @@ export const Login = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const navigate = useNavigate();
+  const [profile, setProfile] = useState(null);
+  const [datos, setDatos] = useState("");
+  
 
   const handleSubmit = async (e) => {
+    
+    
     e.preventDefault();
     setError('');
     setSuccess('');
-
     try {
       const response = await fetch('https://brickly-backend.onrender.com/api/v1/auth/login', {
         method: 'POST',
@@ -26,25 +31,46 @@ export const Login = () => {
         },
         body: JSON.stringify({ email, password }),
       });
-
       if (response.ok) {
         const data = await response.json();
         setSuccess('Login successful!');
-        console.log('Login successful:', data);
-        localStorage.setItem('token', data.token);
-        if(data.email == "test9@gmail.com") return navigate('/');
-        navigate('/PropertyDetail');
-        
+        localStorage.setItem('token', data.token);        
+        fetchProfile(data.token); // Fetch profile after successful login
+        if(data.email == "admin@gmail.com") return navigate('/');
+  
       } else {
-        console.log(response);
         setError('Correo o Clave estan mal!!!');
-        /*setError('Login failed ' + response.statusText);*/
       }
     } catch (err) {
       setError('An error occurred: ' + err.message);
     }
   };
 
+
+  const fetchProfile = async (token) => {
+  
+    
+    try {
+      const response = await fetch('https://brickly-backend.onrender.com/api/v1/auth/profile', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setProfile(data);
+        setDatos(data);
+        navigate('/userHome', { state: { profile: data} }); // Passing profile data
+      } else {
+        setError('Failed to fetch user profile.');
+      }
+    } catch (error) {
+      setError('Error: ' + error.message);
+    }
+  };
   return (
     <>
       <Navbar login={"login"} size={"navbar-brand col-2"} />
@@ -78,22 +104,17 @@ export const Login = () => {
             Entrar
           </button>
           <small className="mt-36 block text-center">
-            ¿No tienes una cuenta brickly? 
+            ¿No tienes una cuenta brickly?
             <a className="px-1 rounded-md text-trueGray-500" href="/auth/register">
               Registrate aquí
             </a>
-          </small>  
-        {error && <div style={{ color: 'red' }}>{error}</div>}
-        {success && <div style={{ color: 'green' }}>{success}</div>}
+          </small>
+          {error && <div style={{ color: 'red' }}>{error}</div>}
+          {success && <div style={{ color: 'green' }}>{success}</div>}
         </form>
-    
       </div>
-      <Footer style={{
-        position: 'fixed',
-        bottom: '0',
-        padding: "0px 16px",
-        height: "140px"
-      }} />
+   
+      <Footer style={{ position: 'fixed', bottom: '0', padding: "0px 16px", height: "140px" }} />
     </>
   );
 };

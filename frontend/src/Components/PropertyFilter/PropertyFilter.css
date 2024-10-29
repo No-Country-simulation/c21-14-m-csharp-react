@@ -22,7 +22,7 @@
     color: #333;
   }
   
-  select, input[type="range"] {
+  .property-filter select, input[type="range"] {
     width: 100%;
     padding: 8px;
     border: 1px solid #ced4da;
@@ -30,7 +30,7 @@
     font-size: 14px;
   }
   
-  select {
+  .property-filter select {
     appearance: none;
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
     background-repeat: no-repeat;

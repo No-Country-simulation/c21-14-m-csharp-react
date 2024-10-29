@@ -106,7 +106,7 @@ export const Login = () => {
           </button>
           <small className="mt-36 block text-center">
             ¿No tienes una cuenta brickly?
-            <a className="px-1 rounded-md text-trueGray-500" href="/auth/register">
+            <a className="px-1 rounded-md text-trueGray-500" href="/register">
               Registrate aquí
             </a>
           </small>

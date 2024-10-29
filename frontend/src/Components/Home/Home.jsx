@@ -21,10 +21,7 @@ export const Home = () => {
       <SectionInformation/>
       <SectionContact/>
       <LocationMap/>
-      <Footer style={{
-      padding:"50px 16px",
-      height:"196px"}}
-   />
+      <Footer />
     </>
 
   )

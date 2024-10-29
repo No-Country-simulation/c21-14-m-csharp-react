@@ -19,9 +19,9 @@ export const SectionProject = () => {
 
         <div className="d-flex justify-content-center align-items-center menu col-lg-12 shadow-lg mb-5 bg-body ">
             <ul >
-                <li><NavLink exact activeclassName="active" to='/Argentina' >Argentina</NavLink></li>    
-                <li><NavLink activeclassName="active" to='/Mexico'>México</NavLink></li> 
-                <li><NavLink exact activeclassName="active" to='/Colombia'>Colombia</NavLink></li>
+                <li><NavLink  to='/Argentina' >Argentina</NavLink></li>    
+                <li><NavLink  to='/Mexico'>México</NavLink></li> 
+                <li><NavLink  to='/Colombia'>Colombia</NavLink></li>
             </ul>
         </div>
         <div onClick={handleButtonClick}  className='cards'>

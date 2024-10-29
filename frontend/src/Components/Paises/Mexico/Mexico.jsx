@@ -36,10 +36,10 @@ export const Mexico = () => {
   return (
    <section className='c-mexico d-flex mx-auto'>
     {
-      propiedad.map(user=>{
+      propiedad.map((user,index)=>{
         return (
-<>
-         <div className='card p-0 ' key={user.id}>
+
+         <div key={index} className='card p-0 ' >
         
           <h2>{user.name}</h2>
             <img src={user.img} alt=" " />
@@ -53,7 +53,7 @@ export const Mexico = () => {
          
             <button className='btn btnC btn-primary'>Ver más</button>
           </div>
-</>
+
       
         )
          

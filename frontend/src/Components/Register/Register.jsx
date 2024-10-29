@@ -185,7 +185,8 @@ export const Register = () => {
               </div>
               <button type="submit" className='btn btn-secondary'>Registrarse</button>
               <label className='text-center mt-3'>¿Ya tienes una cuenta Brickly?
-                <Link className="px-1 rounded-md underline" href="/auth/login"> Ingresa aquí</Link>
+                <a className="px-1 rounded-md underline" href="/login"> Ingresa aquí</a>
+               
               </label>
               {message && <p style={{ color: 'green' }}>{message}</p>}
               {error && <p style={{ color: 'red' }}>{error}</p>}

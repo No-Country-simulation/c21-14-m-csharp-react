@@ -11,6 +11,7 @@ import VerifyCodeModal from './Components/VerifyCodeModal/VerifyCodeModal.jsx';
 import React,{useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ErrorLogin } from './Components/ErrorLogin/ErrorLogin.jsx';
+import { PayComp } from './Components/PayComp/PayComp.jsx';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -53,6 +54,7 @@ function App() {
             <Route path='/PropertyDetail' element={<PropertyDetail />} />
             <Route path='/UserHome' element={<UserHome />} />
             <Route path='/ErrorLogin' element={<ErrorLogin />} />
+            <Route path='/PayComp' element={<PayComp/>} />
 
           </Routes>
         </Router>

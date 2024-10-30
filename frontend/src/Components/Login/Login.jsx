@@ -4,8 +4,7 @@ import './Login.css'
 import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 import AsideLeft from '../AsideLeft/AsideLeft ';
-import { Portfolio } from '../Portfolio/Portfolio';
-import { ErrorLogin } from '../ErrorLogin/ErrorLogin';
+
 
 
 export const Login = () => {
@@ -37,7 +36,9 @@ export const Login = () => {
         setSuccess('Login successful!');
         localStorage.setItem('token', data.token);        
         fetchProfile(data.token); // Fetch profile after successful login
-        if(data.email == "admin@gmail.com") return navigate('/');
+
+
+       // if(data.email == "admin@gmail.com") return navigate('/dashboard');
   
       } else {
        navigate('/ErrorLogin');
@@ -64,6 +65,8 @@ export const Login = () => {
         const data = await response.json('https://brickly-backend.onrender.com/api/v1/auth/profile');
         setProfile(data);
         setDatos(data);
+        const dataJSON = JSON.stringify(data); 
+        localStorage.setItem('data',dataJSON);
         navigate('/userHome', { state: { profile: data} }); // Passing profile data
       } else {
         setError('Failed to fetch user profile.');
@@ -78,7 +81,7 @@ export const Login = () => {
       <div className='contenedor d-flex justify-content-between col-12'>
         <AsideLeft />
         <form onSubmit={handleSubmit} className="login-container main-content col-6">
-          <h1 className="font-bold text-2xl mb-16">INICIAR SESION</h1>
+          <h1 className="font-bold text-2xl mb-16 text-primary">INICIAR SESION</h1>
           <label htmlFor="email" className="text-black font-bold mb-2 block text-sm">
             ¿Cuál es tu correo electrónico?
           </label>

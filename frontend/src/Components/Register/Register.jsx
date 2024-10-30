@@ -49,7 +49,7 @@ export const Register = ({ onEmailSent }) => {
       }
       const phoneRegex = /^\+\d{5,}$/;
       if (!phoneRegex.test(formData.countryCode+formData.phone)) {
-        console.log(formData.phone);
+  
         
         setError('El número de teléfono debe tener el formato correcto con prefijo por país.' );
         return false;

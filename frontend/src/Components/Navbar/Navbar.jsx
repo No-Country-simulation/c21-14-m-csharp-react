@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
 export const Navbar = ({
+
   loggedIn,
   home,
   login,
@@ -12,11 +13,14 @@ export const Navbar = ({
   portfolio,
   userHome,
   PropertyDetail,
-  modal
+  modal,
+  profile
 }) => {
+  const boxStyle = {boxShadow: '9px 9px 8px rgba(0, 0, 0, 0.3)' };
   return (
+    
     <>
-      <nav className=" position-fixed navbar navbar-expand-lg  z-1 navbar-light c_navbar">
+      <nav style={boxStyle} className=" position-fixed navbar navbar-expand-lg  z-1 navbar-light c_navbar">
         <a className="navbar-brand" href="/">
           <svg
             width="200"
@@ -72,7 +76,7 @@ export const Navbar = ({
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div
+        <div  
           className="collapse navbar-collapse  d-flex justify-content-end mx-5"
           id="navbarNav"
         >
@@ -130,7 +134,7 @@ export const Navbar = ({
                 </div>{" "}
                 <div className="navbar-brand">
                   {" "}
-                  <Link className="text-decoration-underline link-offset-3" to="/">Mi Portafolio</Link>{" "}
+                  <Link className="text-decoration-underline link-offset-3" to="/Portfolio"  >Mi Portafolio</Link>{" "}
                 </div>{" "}
                 <div className="navbar-links">
                   {" "}

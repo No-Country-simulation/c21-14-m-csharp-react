@@ -1,5 +1,5 @@
 import React from 'react'
-import imagen from '../../../../public/img/carta_img_propiedad.jpg'
+import imagen from '../../../assets/carta_img_propiedad.jpg'
 import './Mexico.css'
 
 

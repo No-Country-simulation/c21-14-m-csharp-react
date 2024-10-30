@@ -6,11 +6,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { PropertyDetail } from './Components/PropertyDetail/PropertyDetail.jsx';
 import { Portfolio } from './Components/Portfolio/Portfolio.jsx';
 import { UserHome } from './Components/UserHome/UserHome.jsx';
+import VerifyCodeModal from './Components/VerifyCodeModal/VerifyCodeModal.jsx';
 /*import {Tarjeta} from './Components/Tarjeta/Tarjeta.jsx';*/
-import React from 'react';
+import React,{useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { ErrorLogin } from './Components/ErrorLogin/ErrorLogin.jsx';
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+  const handleShow = () => {setShowModal(true)};
+  const handleClose = () => {setShowModal(false)};
 /*
   const [properties, setProperties] = useState([]); 
   const [error, setError] = useState(null); 
@@ -26,11 +31,11 @@ function App() {
           fetchProperties(); },[]);*/
   return (
     <>
-    
-    
-   { /*<div> 
-      
-      {error && <div style={{ color: 'red' }}>{error}</div>} 
+   
+   {
+   
+   /*<div> 
+    {error && <div style={{ color: 'red' }}>{error}</div>} 
         <div className="tarjetas-container"> {properties.map(property => ( 
                  <Tarjeta key={property.id} property={property} /> ))} 
           </div> 
@@ -41,7 +46,8 @@ function App() {
         <Router>
           <Routes>
             <Route  path='/' element={<Home />} exact/>
-            <Route path='/register' element={<Register />} />
+            <Route path='/register' element={<Register onEmailSent={handleShow} />} />
+           
             <Route path='/login' element={<Login />} />
             <Route path='/Portfolio' element={<Portfolio />} />
             <Route path='/PropertyDetail' element={<PropertyDetail />} />
@@ -50,6 +56,7 @@ function App() {
 
           </Routes>
         </Router>
+        <VerifyCodeModal show={showModal} handleClose={handleClose} />
       </div>
     </>
   )

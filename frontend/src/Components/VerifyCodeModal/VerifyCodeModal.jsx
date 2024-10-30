@@ -1,22 +1,75 @@
-import React from "react";
-import "./Navbar.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Modal, Button, Form } from "react-bootstrap";
+import { Footer } from "../Footer/Footer";
 
-export const Navbar = ({
-  loggedIn,
-  home,
-  login,
-  register,
-  size,
-  portfolio,
-  userHome,
-  PropertyDetail,
-  modal
-}) => {
+const VerifyCodeModal = ({ show, handleClose }) => {
+  const [codes, setCodes] = useState(new Array(6).fill(""));
+  const [correo, setCorreo] = useState("");
+  const [timeLeft, setTimeLeft] = useState(180); // 3 minutos en segundos
+  const storedCode = localStorage.getItem("verificationCode");
+  useEffect(() => {
+    if (show) {
+      const userJSON = localStorage.getItem("jsonData");
+      if (userJSON) {
+        const jsonData = JSON.parse(userJSON);
+        setCorreo(jsonData.email);
+      }
+      const timer = setInterval(() => {
+        setTimeLeft((prevTime) => prevTime - 1);
+      }, 1000);
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        setTimeLeft(180); // Reinicia el tiempo después de que expire
+      }
+      return () => clearInterval(timer);
+    }
+  }, [show, timeLeft]);
+  const handleChange = (e, index) => {
+    const value = e.target.value;
+    if (value.length <= 1) {
+      const newCodes = [...codes];
+      newCodes[index] = value;
+      setCodes(newCodes);
+    }
+  };
+  const handleVerify = async (e) => {
+    e.preventDefault();
+    const verificationCode = codes.join("");
+    if (verificationCode === storedCode) {
+      alert("Verificación exitosa! Bienvenido a la aplicación.");
+      try {
+        const userJSON = localStorage.getItem("jsonData");
+        const jsonData = JSON.parse(userJSON);
+        const response = await fetch(
+          "https://brickly-backend.onrender.com/api/v1/auth/register",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(jsonData),
+          }
+        );
+        if (!response.ok) {
+          throw new Error("Error en la solicitud");
+        }
+        
+        window.location.href = "/login";
+      } catch (error) {
+        console.log("todo mal" + error);
+      }
+      handleClose();
+    } else {
+      alert("Código incorrecto. Inténtalo de nuevo.");
+    }
+  };
+  const formatTime = (seconds) => {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
+  };
+
   return (
-    <>
-      <nav className=" position-fixed navbar navbar-expand-lg  z-1 navbar-light c_navbar">
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Header className="navbar-light c_navbar h-0 p-0" closeButton>
         <a className="navbar-brand" href="/">
           <svg
             width="200"
@@ -26,7 +79,7 @@ export const Navbar = ({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M3 23.9799L28.3042 3.57047C29.1578 2.88192 30.3789 3.02327 31.0682 3.89042L50.0377 27.7542C51.1238 29.1208 50.1954 31.1937 48.4969 31.1937H35.0784C33.9715 31.1937 33.0741 32.1329 33.0741 33.2914V48.8027M52.7715 38.7641V54.9562C52.7715 56.1145 51.8743 57.0539 50.7673 57.0539H9.32011C8.21322 57.0539 7.31589 56.1145 7.31589 54.9562V32.2217C7.31589 31.5732 7.60247 30.9611 8.09217 30.5638L24.9333 16.8987" 
+              d="M3 23.9799L28.3042 3.57047C29.1578 2.88192 30.3789 3.02327 31.0682 3.89042L50.0377 27.7542C51.1238 29.1208 50.1954 31.1937 48.4969 31.1937H35.0784C33.9715 31.1937 33.0741 32.1329 33.0741 33.2914V48.8027M52.7715 38.7641V54.9562C52.7715 56.1145 51.8743 57.0539 50.7673 57.0539H9.32011C8.21322 57.0539 7.31589 56.1145 7.31589 54.9562V32.2217C7.31589 31.5732 7.60247 30.9611 8.09217 30.5638L24.9333 16.8987"
               stroke="url(#paint0_linear_410_153)"
               strokeWidth="4.49258"
               strokeLinecap="round"
@@ -61,179 +114,65 @@ export const Navbar = ({
             </defs>
           </svg>
         </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse  d-flex justify-content-end mx-5"
-          id="navbarNav"
-        >
-          {
-          
-          home == "home" ? (
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#seccion1">
-                  Cómo funciona
-                </a>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link " to="/Login">
-                  Ingresar
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="btn btn-outline-primary " to="/Register">
-                  Crear cuenta
-                </Link>
-              </li>
-            </ul>
-          ) : login == "login" ? (
-            <ul className="navbar-nav mb-2 col-3 mb-lg-2">
-              <li classn="nav-item">
-                <Link
-                  className="btn btn-outline-primary btn-rlogin"
-                  to="/Register"
-                >
-                  Crear cuenta
-                </Link>
-              </li>
-            </ul>
-          ) : register == "register" ? (
-            <>
-              <ul className="navbar-nav mb-2  mb-lg-0 col-2">
-                <li className="nav-item">
-                  <Link
-                    className="nav-link btn btn-outline-primary"
-                    to="/Login"
-                  >
-                    Ingresar
-                  </Link>
-                </li>
-              </ul>
-            </>
-          ) : userHome == "userHome" ? (
-            <div className="userHome">
-              <nav className="navbar">
-                {" "}
-                <div className="navbar-brand">
-                  {" "}
-                  <Link to="/">Home</Link>{" "}
-                </div>{" "}
-                <div className="navbar-brand">
-                  {" "}
-                  <Link className="text-decoration-underline link-offset-3" to="/">Mi Portafolio</Link>{" "}
-                </div>{" "}
-                <div className="navbar-links">
-                  {" "}
-                  {loggedIn ? (
-                    <div className="dropdown">
-                      {" "}
-                      <button className="dropbtn">🧑</button>{" "}
-                      <div className="dropdown-content">
-                        {" "}
-                        <Link to="/account">Mi cuenta</Link>{" "}
-                        <Link to="/notifications">Notificaciones</Link>{" "}
-                        <a href="/" onClick={() => handleLogout()}>
-                          Cerrar sesión
-                        </a>{" "}
-                      </div>{" "}
-                    </div>
-                  ) : (
-                    <>
-                      {" "}
-                      <Link to="/login">Login</Link>{" "}
-                      <Link to="/register">Signup</Link>{" "}
-                    </>
-                  )}{" "}
-                </div>{" "}
-              </nav>
-            </div>
-          ) : PropertyDetail == "PropertyDetail" ? (
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link " to="/Login">
-                    Ingresar
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="btn btn-outline-primary " to="/Register">
-                    Crear cuenta
-                  </Link>
-                </li>
-              </ul>
-          ) :userHome == "userHome" ? (
-              <div className="userHome">
-                <nav className="navbar">
-                  {" "}
-                  <div className="navbar-brand">
-                    {" "}
-                    <Link to="/">Home</Link>{" "}
-                  </div>{" "}
-                  <div className="navbar-brand">
-                    {" "}
-                    <Link className="text-decoration-underline link-offset-3" to="/">Mi Portafolio</Link>{" "}
-                  </div>{" "}
-                  <div className="navbar-links">
-                    {" "}
-                    {loggedIn ? (
-                      <div className="dropdown">
-                        {" "}
-                        <button className="dropbtn">🧑</button>{" "}
-                        <div className="dropdown-content">
-                          {" "}
-                          <Link to="/account">Mi cuenta</Link>{" "}
-                          <Link to="/notifications">Notificaciones</Link>{" "}
-                          <a href="/" onClick={() => handleLogout()}>
-                            Cerrar sesión
-                          </a>{" "}
-                        </div>{" "}
-                      </div>
-                    ) : (
-                      <>
-                        {" "}
-                        <Link to="/login">Login</Link>{" "}
-                        <Link to="/register">Signup</Link>{" "}
-                      </>
-                    )}{" "}
-                  </div>{" "}
-                </nav>
+      </Modal.Header>
+      <Modal.Body>
+        <div className="d-flex">
+          <div className="AsideModal"></div>
+          <Form onSubmit={handleVerify} className="mb-3 -mt-2 w-50 formModal">
+            <h2 className="fs-3">Crear tu Cuenta</h2>
+            <Form.Group
+              className="d-flex flex-column  align-items-center"
+              controlId="formVerificationCode"
+            >
+              <p className="modalP">Verifica tu correo electronico</p>
+              <p className="lh-1 modalP2 pr-3">
+                Revisa tu bandeja de entrada. Hemos enviado un codigo unico de 6
+                digitos a tu correo:
+              </p>
+              <h3 className="modalH3">{correo}</h3>
+              <small>Ingresa tu codigo. El codigo expira en 3 minutos</small>
+              <div
+                style={{
+                  display: "flex",
+                  gap: "0",
+                  justifyContent: "space-around",
+                  margin: "22px ",
+                  padding: "0",
+                  width: "300px",
+                }}
+              >
+                {codes.map((code, index) => (
+                  <Form.Control
+                    key={index}
+                    type="text"
+                    value={code}
+                    onChange={(e) => handleChange(e, index)}
+                    maxLength="1"
+                    style={{
+                      width: "2.5rem",
+                      height: "50px",
+                      textAlign: "center",
+                      margin: "0px",
+                      border: "1px solid black",
+                    }}
+                    required
+                  />
+                ))}
               </div>
-            ) : modal == "a" ? (
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <a className="nav-link" href="/">
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link " to="/Login">
-                      Ingresar
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="btn btn-outline-primary " to="/Register">
-                      Crear cuenta
-                    </Link>
-                  </li>
-                </ul>
-              ) :""
-          }
+              <small className="w-75 d-block pl-t ml-5">
+                Si no has recibido tu codigo, o ya expiro puedes solicitar uno
+                nuevo en: <b> {formatTime(timeLeft)}</b>
+              </small>
+            </Form.Group>
+            <Button variant="primary" type="submit" className="btnModal">
+              Verificar
+            </Button>
+          </Form>
         </div>
-      </nav>
-    </>
+      </Modal.Body>
+      <Footer h={"120px"} b={"0px"} m={"-30px"} />
+    </Modal>
   );
 };
+
+export default VerifyCodeModal;

@@ -16,7 +16,7 @@ export const Login = () => {
   const navigate = useNavigate();
   const [profile, setProfile] = useState(null);
   const [datos, setDatos] = useState("");
-  
+ 
 
   const handleSubmit = async (e) => {
     
@@ -115,7 +115,7 @@ export const Login = () => {
         </form>
       </div>
    
-      <Footer style={{ position: 'fixed', bottom: '0', padding: "0px 16px", height: "140px" }} />
+      <Footer position="fixed" h="140px" b="0"/>
     </>
   );
 };

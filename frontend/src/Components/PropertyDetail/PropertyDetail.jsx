@@ -31,7 +31,7 @@ export const PropertyDetail = () => {
     ];
   return (
     <>
-    <Navbar home={"home"}/>
+    <Navbar PropertyDetail={"PropertyDetail"}/>
     <div className="container-fluid">
             <div className="row">
                 <Property 
@@ -43,15 +43,15 @@ export const PropertyDetail = () => {
         </div>
         
     <hr className='m-auto'/>
-    <h1>Otros proyectos para invertir</h1>
+    <h1 className='colorMain py-5'>Otros proyectos para invertir</h1>
     <PropertyFilter/>
-    <div className="project-gallery  m-auto "> 
+    <div className="project-gallery  m-auto  px-5 "> 
         <div className="projects-grid py-5 mt-3">
                 {projects.map(project => (
                     <OtherProjects card={project}/>
                 ))}
          </div>
-            <button className='btn-verMas mx-auto my-5'>Ver más</button>
+            <button className='btn-verMas mx-auto my-5 ' style={{left:"0px"}}>Ver más</button>
      </div>
 
     

@@ -1,11 +1,14 @@
 import React from 'react'
 import './Footer.css'
-export const Footer = (  ) => {
+export const Footer = ( {position, h,b,m} ) => {
 
+
+ 
   return (
 
     
-    <div className="footer" >
+    
+    <div style={{position:position,height:h,bottom:b,marginTop:m}} className="footer" >
               <div className="contact-info">
                 <h3>Contacto</h3>
                 <p>Tel: 592-586 925-584</p>

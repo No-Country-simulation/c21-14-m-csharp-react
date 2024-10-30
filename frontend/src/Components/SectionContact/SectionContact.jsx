@@ -17,10 +17,10 @@ const inputStyles = {
 
 const buttonStyles = {
   padding: "10px",
-  backgroundColor: "#0066cc",
+  backgroundColor: "#0C49B0",
   color: "white",
   border: "none",
-  borderRadius: "4px",
+  borderRadius: "10px",
   cursor: "pointer",
   margin: "0 auto",
 };
@@ -34,7 +34,10 @@ export const SectionContact = () => {
       <h3
         style={{ textAlign: "center", marginBottom: "20px", color: "#0C49B0" }}
       >
+        <b>
         DÉJANOS TUS DATOS
+        </b>
+        
       </h3>
       <form>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -90,7 +93,7 @@ export const SectionContact = () => {
             <label htmlFor="pais">Código del país</label>
             <select id="pais" style={inputStyles} defaultValue="mexico">
               <option value="mexico">México (+52)</option>
-              {/* Add more countries as needed */}
+              <option value="usa">USA (+1)</option>
             </select>
           </div>
           <div style={{ width: "30%" }}>

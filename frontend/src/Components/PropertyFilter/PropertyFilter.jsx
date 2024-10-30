@@ -8,9 +8,9 @@ const PropertyFilter = () => {
         <label htmlFor="location">Ubicación</label>
         <select id="location" defaultValue="">
           <option value="" disabled>Selecciona la ubicación</option>
-          <option value="madrid">Madrid</option>
-          <option value="barcelona">Barcelona</option>
-          <option value="valencia">Valencia</option>
+          <option value="madrid">Mexico</option>
+          <option value="barcelona">Argentina</option>
+          <option value="valencia">Colombia</option>
         </select>
       </div>
       <div className="filter-item">

@@ -1,13 +1,13 @@
 .c-mexico {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     z-index: 3;
 }
 .c-mexico  .card{
     border: 1px solid #082E70;
     margin: 0 auto;
     height: inherit;
-    width: 25%;
+    width: 30%;
 
 }
 .c-mexico  h2{
@@ -23,8 +23,10 @@
 .c-mexico button{
     background: #0C49B0;
     width: 90%;   
+    height: 50px;
     margin: 0 auto;
     margin-bottom: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
+    font-size: 22px;
    
 }

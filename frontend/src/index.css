@@ -4,4 +4,64 @@
     border-radius: 28px;
 }
 *{padding: 0;
-    margin: 0;}
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+}
+.colorMain{
+    color:#0E58D3;
+}
+.modal {
+   display: flex;
+margin: 0 auto;
+}
+.modal.show .modal-dialog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-content{
+   position: relative;
+   top: 0px;
+   
+    width: 75vw;
+    height: 610px;
+    margin-top: -15px;
+  
+}
+.btn-close{
+   font-size: 30px;
+   margin-right: 59px !important;
+}
+.AsideModal{
+    width: 40%;
+    height: 430px;
+    margin: -16px 0; 
+    margin-right: 30px;
+    background-image: url('./assets/d_aside.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.modalP {
+    color: #15097c;
+    font-weight: 600;
+}
+.modalP2 {
+    width: 89%
+}
+.modalH3{
+    margin: 2px auto;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 24px;
+    color: green;
+}
+.btnModal{
+   margin-left: 45%;
+}
+.formModal{
+   margin: 0 auto;
+   padding: 20px 50px;
+}

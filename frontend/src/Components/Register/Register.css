@@ -3,11 +3,16 @@
 .C_Register {
 
     position: relative;
-    top: 80px;
-    left: -20px;
+    top: 85px;
+    width: 650px !important;
     padding-bottom: 200px;
     height: fit-content;
-    line-height: 23px;
+    line-height: 22px;
+  
+}
+.containerR{
+    margin: 0 auto;
+    max-width: 200px;
 }
 .C_Register h1{
     color: #0C49B0;
@@ -30,14 +35,14 @@ select{
 
 .C_Register input {
     line-height: 0px;
-    width: 100%;
+    width: 95%;
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 .inputSize{
-    width: 236px;
+    width: 50%;
 }
 .C_Register button {
     display: flex;
@@ -65,11 +70,12 @@ select{
 .contenedorR{
     height: 86vh;
   }
-  .form-register{
-    width: 800px;
-  }
+ 
   .selectR{
     padding: 10px;
-    padding-right: 60px;
+
     border-radius: 10px;
   }
+.rc{
+    width: 98% !important;
+}

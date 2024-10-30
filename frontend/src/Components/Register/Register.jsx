@@ -6,8 +6,10 @@ import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import emailjs from 'emailjs-com';
 
-export const Register = () => {
+export const Register = ({ onEmailSent }) => {
+  
     const [formData, setFormData] = useState({
       firstName: '',
       lastName: '',
@@ -23,7 +25,6 @@ export const Register = () => {
     const navigate = useNavigate();
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
-  
     const handleChange = (e) => {
       const { name, value } = e.target;
       setFormData({
@@ -33,6 +34,7 @@ export const Register = () => {
     };
   
     const validateForm = () => {
+      
       if (formData.password !== formData.confirmPassword) {
         setError('Las contraseñas no coinciden.');
         return false;
@@ -60,8 +62,7 @@ export const Register = () => {
       if (!validateForm()) {
         return;
       }
-    
-  
+      
       const fullName = `${formData.firstName} ${formData.lastName}`;
       const dataToSend = {
         ...formData,
@@ -70,7 +71,7 @@ export const Register = () => {
 
       const jsonData={
 
-        "name": dataToSend.name,
+        name: dataToSend.name,
 
         email: dataToSend.email,
 
@@ -84,36 +85,43 @@ export const Register = () => {
 
         profileUrl: dataToSend.profileUrl
       }
-      console.log(jsonData);
       
-      try {
-        const response = await fetch('https://brickly-backend.onrender.com/api/v1/auth/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(jsonData),
+      
+      const verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
+      console.log(dataToSend.email);
+          emailjs.send('service_qb514fa', 'template_sklhw76', {
+            
+                        to_name:dataToSend.name,
+                        verification_code: verificationCode,
+                        to_email: dataToSend.email
+                        ,
+                      },'4CopOlCmJnnzv8g3e')
+
+                  .then((response) => {
+                    // Limpiar todo localStorage
+                        localStorage.clear();
+                        console.log('Correo enviado!', response.status, response.text);
+                        localStorage.setItem('verificationCode', verificationCode);
+                      // Convertir el objeto a una cadena JSON 
+                        const userJSON = JSON.stringify(jsonData);
+                        // Guardar la cadena JSON en localStorage
+                        localStorage.setItem('jsonData', userJSON);
+                 onEmailSent(); // Abre el modal cuando el correo es enviado
+        })
+        .catch((error) => {
+          console.log('Error al enviar el correo:', error);
         });
-        if (!response.ok) {
-          throw new Error('Error en la solicitud');
-        }
-        const result = await response.json();
-        setMessage('¡Registro exitoso!');
-        navigate('/login')
-        setError('');
-      } catch (error) {
-        setError('Hubo un problema con el registro.');
-        setMessage('');
-      }
+
+    
     };
   
     return (
       <>
         <Navbar register={"register"} size={"navbar-brand col-5 "} />
-        <div className='contenedorR d-flex col-12'>
+        <div className='contenedorR d-flex col-11'>
           <AsideLeft />
-          <div className='C_Register main-content'>
-            <form onSubmit={handleSubmit} className='container-fluid w-100 form-register'>
+          
+            <form onSubmit={handleSubmit} className='container col-6 col-lg-6 col-md-6 C_Register'>
               <h1 className=" font-bold text-2xl mb-4">CREA TU CUENTA</h1>
               <p className='px-3'>
                 Al crear una cuenta en Brickly aceptas el{" "}
@@ -121,67 +129,68 @@ export const Register = () => {
                   <b>Aviso de Privacidad y Términos y Condiciones.</b>
                 </Link>
               </p>
-              <div className='d-flex justify-content-around'>
-                <label>
-                  Nombre:
-                  <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-                </label>
-                <label>
-                  Apellido:
-                  <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-                </label>
-              </div>
-              <div>
-                <label className='px-5'>
-                  Correo Electrónico:
-                  <input type="email" name="email" value={formData.email} onChange={handleChange} required />
-                </label>
-              </div>
-              <div className='d-flex justify-content-around'>
-                <label className='inputSize'>
-                Código del País:
-                    <select
-                    name="countryCode"
-                    className="text-center selectR"
-                    value={formData.countryCode}
-                    onChange={handleChange}
-                    >
-                    <option value="">Selecciona un país</option>
-                    <option value="+52">Mexico (+52)</option>
-                    <option value="+1">United States (+1)</option>
-                    <option value="+44">United Kingdom (+44)</option>
-                    </select>
-                </label>
-                <label className='inputSize'>
-                  ¿Cuál es tu número móvil?:
-                  <input className="text-center border" type="tel" name="phone" placeholder="Escribe tu número móvil" value={formData.phone} onChange={handleChange} required />
-                </label>
-              </div>
-              <div style={{ padding: "0 2.5rem" }} className='d-flex justify-content-between m-1'>
-                <label className='inputSize'>
-                  País:
-                  <input type="text" name="country" value={formData.country} onChange={handleChange} required />
-                </label>
-                <label className='inputSize'>
-                  Documento de Identificación:
-                  <input type="text" name="documentId" value={formData.documentId} onChange={handleChange} required />
-                </label>
-              </div>
-              <div className='d-flex justify-content-around'>
-                <label className='inputSize'>
-                  Contraseña:
-                  <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="********" required />
-                </label>
-                <label className='inputSize'>
-                  Confirmar Contraseña:
-                  <input type="password" name="confirmPassword" value={formData.confirmPassword} placeholder="********" onChange={handleChange} required />
-                </label>
-              </div>
-              <div style={{ padding: "0 2.8rem" }}>
-                <label>
-                  URL del Perfil:
-                  <input type="url" name="profileUrl" value={formData.profileUrl} onChange={handleChange} required />
-                </label>
+              <div className='container w-75 containerR'>    
+                      <div className='d-flex justify-content-between'>
+                        <label>
+                          Nombre:
+                          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
+                        </label>
+                        <label>
+                          Apellido:
+                          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
+                        </label>
+                      </div>
+ 
+                        <label >
+                          Correo Electrónico:
+                          <input className=' rc ' type="email" name="email" value={formData.email} onChange={handleChange} required />
+                        </label>
+                      <div className='d-flex col-12 w-100 justify-content-between'>
+                        <label className='col-6 '>
+                        Código del País:
+                            <select
+                            name="countryCode"
+                            className="text-center w-75 selectR"
+                            value={formData.countryCode}
+                            onChange={handleChange}
+                            >
+                            <option value="">Selecciona un país</option>
+                            <option value="+52">Mexico (+52)</option>
+                            <option value="+1">United States (+1)</option>
+                            <option value="+44">United Kingdom (+44)</option>
+                            </select>
+                        </label>
+                        <label className='w-50 col-5'>
+                          ¿Cuál es tu número móvil?:
+                          <input className="text-center border" type="tel" name="phone" placeholder="Escribe tu número móvil" value={formData.phone} onChange={handleChange} required />
+                        </label>
+                      </div>
+                      <div className='d-flex justify-content-between m-1'>
+                        <label className='inputSize '>
+                          País:
+                          <input type="text" name="country" value={formData.country} onChange={handleChange} required />
+                        </label>
+                        <label className='inputSize'>
+                          Documento de Identificación:
+                          <input type="text" name="documentId" value={formData.documentId} onChange={handleChange} required />
+                        </label>
+                      </div>
+                      <div className='d-flex justify-content-around'>
+                        <label className='inputSize'>
+                          Contraseña:
+                          <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="********" required />
+                        </label>
+                        <label className='inputSize'>
+                          Confirmar Contraseña:
+                          <input type="password" name="confirmPassword" value={formData.confirmPassword} placeholder="********" onChange={handleChange} required />
+                        </label>
+                      </div>
+                      <div >
+                        <label>
+                          URL del Perfil:
+                          <input className='rc' type="url" name="profileUrl" value={formData.profileUrl} onChange={handleChange} required />
+                        </label>
+                      </div>
               </div>
               <button type="submit" className='btn btn-secondary'>Registrarse</button>
               <label className='text-center mt-3'>¿Ya tienes una cuenta Brickly?
@@ -191,9 +200,9 @@ export const Register = () => {
               {message && <p style={{ color: 'green' }}>{message}</p>}
               {error && <p style={{ color: 'red' }}>{error}</p>}
             </form>
-          </div>
+          
         </div>
-        <Footer style={{ position: 'fixed', bottom: '0', padding: "0px 16px", height: "140px", }} />
+        <Footer position="fixed" h="140px" b="0"/>
       </>
     );
   };

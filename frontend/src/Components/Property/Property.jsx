@@ -64,7 +64,7 @@ export const Property = () => {
           </p>
         </div>
       </div>
-      <button className="invest-button w-25">Invertir Ahora</button>
+      <button onClick={() =>  window.location.href ="/PayComp"} className="invest-button w-25">Invertir Ahora</button>
       <div className="favorite-icon">❤</div>
     </div>
   )

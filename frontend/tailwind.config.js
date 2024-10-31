@@ -5,9 +5,11 @@ export default {
     extend: {
       colors: {
         main: '#0C49B0',
-        secondary: '#082E70',
+        secon: '#082E70',
+        link: '#2e68c9',
         mainBlack: '#1A1A1A',
         gray: '#666666',
+        lighGray: '#E7EDF5',
       },
     },
   },

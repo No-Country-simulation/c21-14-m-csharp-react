@@ -72,6 +72,7 @@ const SearchProperties = ({ setData, setLoading }) => {
             <option value="argentina">Argentina</option>
             <option value="méxico">México</option>
             <option value="dominicana">Rca. Dominicana</option>
+            <option value="paraguay">Paraguay</option>
           </select>
         </div>
       </div>

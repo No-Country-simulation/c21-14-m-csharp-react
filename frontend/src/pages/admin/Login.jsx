@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Header from './components/Header'
+import { Header } from './components/Header'
 import Error from './components/Error'
 import Cookies from 'js-cookie'
+import { useAuth } from './components/AuthContext'
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' })
   const [error, setError] = useState()
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const { login } = useAuth()
 
   const handleChange = event => {
     const { name, value } = event.target
@@ -32,7 +34,7 @@ const Login = () => {
 
     try {
       const response = await fetch(
-        'https://brickly-backend.onrender.com/api/v1/auth/admin/login',
+        'http://localhost:8000/api/v1/auth/admin/login',
         {
           method: 'POST',
           headers: {
@@ -45,6 +47,7 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json()
         console.log('Login successful:', data)
+        login(data.token)
         Cookies.set('auth', data.token)
         navigate('/admin/dashboard')
       } else {

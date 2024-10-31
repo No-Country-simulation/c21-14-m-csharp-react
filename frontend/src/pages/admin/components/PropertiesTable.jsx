@@ -1,5 +1,6 @@
 import { DataGrid } from '@mui/x-data-grid'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { Link } from 'react-router-dom'
 
 const columns = [
   {
@@ -7,15 +8,13 @@ const columns = [
     headerName: 'Nombre de la propiedad',
     width: '250 ',
     renderCell: params => (
-      <a
-        href={`https://example.com/${params.row.id}`}
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to={`/admin/property/${params.row.id}`}
         className="flex items-center gap-2 text-slate-500 "
       >
         <span className="text-black">{params.value}</span>
         <i className="fa-solid fa-arrow-up-right-from-square fa-xs"></i>
-      </a>
+      </Link>
     ),
   },
   {

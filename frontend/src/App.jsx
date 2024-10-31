@@ -1,54 +1,35 @@
-import './App.css'
+// App.js
 import { Register } from './Components/Register/Register'
-import { Login } from "./Components/Login/Login";
+import { Login } from './Components/Login/Login'
 import { Home } from './Components/Home/Home'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { PropertyDetail } from './Components/PropertyDetail/PropertyDetail.jsx';
+import { Routes, Route } from 'react-router-dom'
+import { PropertyDetail } from './Components/PropertyDetail/PropertyDetail.jsx'
+import PropertyDetailAdmin from './pages/admin/PropertyDetail.jsx'
+import LoginAdmin from './pages/admin/Login.jsx'
+import AddProperty from './pages/admin/AddProperty.jsx'
+import Dashboard from './pages/admin/Dashboard.jsx'
+import PropertiesPortfolio from './pages/admin/PropertiesPortfolio.jsx'
+import UsersView from './pages/admin/UsersView.jsx'
+import { AuthProvider } from './pages/admin/components/AuthContext.jsx'
+import PrivateRoute from './pages/admin/components/PrivateRoute.jsx'
 import { Portfolio } from './Components/Portfolio/Portfolio.jsx';
 import { UserHome } from './Components/UserHome/UserHome.jsx';
 import VerifyCodeModal from './Components/VerifyCodeModal/VerifyCodeModal.jsx';
-/*import {Tarjeta} from './Components/Tarjeta/Tarjeta.jsx';*/
-import React,{useState} from 'react';
+import {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { ErrorLogin } from './Components/ErrorLogin/ErrorLogin.jsx';
 import { PayComp } from './Components/PayComp/PayComp.jsx';
+
 
 function App() {
   const [showModal, setShowModal] = useState(false);
   const handleShow = () => {setShowModal(true)};
   const handleClose = () => {setShowModal(false)};
-/*
-  const [properties, setProperties] = useState([]); 
-  const [error, setError] = useState(null); 
-  useEffect(() => { 
-    const fetchProperties = async () => { 
-      try { const response = await fetch('https://brickly-backend.onrender.com/api/v1/properties');
-         if (response.ok) { const data = await response.json(); setProperties(data); } 
-         else { setError('Failed to fetch properties'); } }
-          catch (error) { setError('Error: ' + error.message); 
-
-          } };
-          
-          fetchProperties(); },[]);*/
   return (
-    <>
-   
-   {
-   
-   /*<div> 
-    {error && <div style={{ color: 'red' }}>{error}</div>} 
-        <div className="tarjetas-container"> {properties.map(property => ( 
-                 <Tarjeta key={property.id} property={property} /> ))} 
-          </div> 
-      </div>
-      */}
-     
-
-        <Router>
-          <Routes>
-            <Route  path='/' element={<Home />} exact/>
+    <AuthProvider>
+      <Routes>
+      <Route  path='/' element={<Home />} exact/>
             <Route path='/register' element={<Register onEmailSent={handleShow} />} />
-           
             <Route path='/login' element={<Login />} />
             <Route path='/Portfolio' element={<Portfolio />} />
             <Route path='/PropertyDetail' element={<PropertyDetail />} />
@@ -56,11 +37,21 @@ function App() {
             <Route path='/ErrorLogin' element={<ErrorLogin />} />
             <Route path='/PayComp' element={<PayComp/>} />
 
-          </Routes>
-        </Router>
-        <VerifyCodeModal show={showModal} handleClose={handleClose} />
-     
-    </>
+        {/* Rutas para el administrador */}
+        <Route path="/admin">
+          <Route path="login" element={<LoginAdmin />} />
+          {/* Rutas protegidas con PrivateRoute */}
+          <Route element={<PrivateRoute />}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="addproperty" element={<AddProperty />} />
+            <Route path="portfolio" element={<PropertiesPortfolio />} />
+            <Route path="users" element={<UsersView />} />
+            <Route path="property/:id" element={<PropertyDetailAdmin />} />
+          </Route>
+        </Route>
+      </Routes>
+      <VerifyCodeModal show={showModal} handleClose={handleClose} />
+    </AuthProvider>
   )
 }
 

@@ -7,7 +7,7 @@ import { Footer } from '../Footer/Footer';
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
-
+import imagen from '../../assets/d_aside.png'
 export const Register = ({ onEmailSent }) => {
   
     const [formData, setFormData] = useState({
@@ -117,92 +117,88 @@ export const Register = ({ onEmailSent }) => {
   
     return (
       <>
-        <Navbar register={"register"} size={"navbar-brand col-5 "} />
-        <div className='contenedorR d-flex col-11'>
-          <AsideLeft />
-          
-            <form onSubmit={handleSubmit} className='container col-6 col-lg-6 col-md-6 C_Register'>
-              <h1 className=" font-bold text-2xl mb-4">CREA TU CUENTA</h1>
-              <p className='px-3'>
-                Al crear una cuenta en Brickly aceptas el{" "}
-                <Link href="#">
-                  <b>Aviso de Privacidad y Términos y Condiciones.</b>
-                </Link>
-              </p>
-              <div className='container w-75 containerR'>    
-                      <div className='d-flex justify-content-between'>
-                        <label>
-                          Nombre:
-                          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required />
-                        </label>
-                        <label>
-                          Apellido:
-                          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required />
-                        </label>
-                      </div>
- 
-                        <label >
-                          Correo Electrónico:
-                          <input className=' rc ' type="email" name="email" value={formData.email} onChange={handleChange} required />
-                        </label>
-                      <div className='d-flex col-12 w-100 justify-content-between'>
-                        <label className='col-6 '>
-                        Código del País:
-                            <select
-                            name="countryCode"
-                            className="text-center w-75 selectR"
-                            value={formData.countryCode}
-                            onChange={handleChange}
-                            >
-                            <option value="">Selecciona un país</option>
-                            <option value="+52">Mexico (+52)</option>
-                            <option value="+1">United States (+1)</option>
-                            <option value="+44">United Kingdom (+44)</option>
-                            </select>
-                        </label>
-                        <label className='w-50 col-5'>
-                          ¿Cuál es tu número móvil?:
-                          <input className="text-center border" type="tel" name="phone" placeholder="Escribe tu número móvil" value={formData.phone} onChange={handleChange} required />
-                        </label>
-                      </div>
-                      <div className='d-flex justify-content-between m-1'>
-                        <label className='inputSize '>
-                          País:
-                          <input type="text" name="country" value={formData.country} onChange={handleChange} required />
-                        </label>
-                        <label className='inputSize'>
-                          Documento de Identificación:
-                          <input type="text" name="documentId" value={formData.documentId} onChange={handleChange} required />
-                        </label>
-                      </div>
-                      <div className='d-flex justify-content-around'>
-                        <label className='inputSize'>
-                          Contraseña:
-                          <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="********" required />
-                        </label>
-                        <label className='inputSize'>
-                          Confirmar Contraseña:
-                          <input type="password" name="confirmPassword" value={formData.confirmPassword} placeholder="********" onChange={handleChange} required />
-                        </label>
-                      </div>
-                      <div >
-                        <label>
-                          URL del Perfil:
-                          <input className='rc' type="url" name="profileUrl" value={formData.profileUrl} onChange={handleChange} required />
-                        </label>
-                      </div>
-              </div>
-              <button type="submit" className='btn btn-secondary'>Registrarse</button>
-              <label className='text-center mt-3'>¿Ya tienes una cuenta Brickly?
-                <a className="px-1 rounded-md underline" href="/login"> Ingresa aquí</a>
-               
-              </label>
-              {message && <p style={{ color: 'green' }}>{message}</p>}
-              {error && <p style={{ color: 'red' }}>{error}</p>}
-            </form>
-          
+       <Navbar register={"register"} size={"navbar-brand col-5 "} />
+<div className='contenedorR pt-5 col-11' style={{ position: "relative" }}>
+  <div className='d-flex col-12 '>
+    {/* <AsideLeft /> */}
+    <img className='col-5' style={{ paddingTop: "30px", position: "relative" }} src={imagen} alt="" />
+    <form onSubmit={handleSubmit} className='container col-6 col-lg-6 col-md-6 C_Register' style={{ position: "relative" }}>
+      <h1 className="font-bold text-2xl mb-4">CREA TU CUENTA</h1>
+      <p className='px-3'>
+        Al crear una cuenta en Brickly aceptas el{" "}
+        <Link href="#">
+          <b>Aviso de Privacidad y Términos y Condiciones.</b>
+        </Link>
+      </p>
+      <div className='container w-75 containerR'>
+        <div className='d-flex justify-content-between'>
+          <label>
+            Nombre:
+            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} required style={{ position: "relative" }} />
+          </label>
+          <label>
+            Apellido:
+            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} required style={{ position: "relative" }} />
+          </label>
         </div>
-        <Footer position="fixed" h="140px" b="0"/>
+        <label>
+          Correo Electrónico:
+          <input className='rc' type="email" name="email" value={formData.email} onChange={handleChange} required style={{ position: "relative" }} />
+        </label>
+        <div className='d-flex col-12 w-100 justify-content-between'>
+          <label className='col-6'>
+            Código del País:
+            <select name="countryCode" className="text-center w-75 selectR" value={formData.countryCode} onChange={handleChange} style={{ position: "relative" }}>
+              <option value="">Selecciona un país</option>
+              <option value="+52">Mexico (+52)</option>
+              <option value="+1">United States (+1)</option>
+              <option value="+44">United Kingdom (+44)</option>
+            </select>
+          </label>
+          <label className='w-50 col-5'>
+            ¿Cuál es tu número móvil?:
+            <input className="text-center border" type="tel" name="phone" placeholder="Escribe tu número móvil" value={formData.phone} onChange={handleChange} required style={{ position: "relative" }} />
+          </label>
+        </div>
+        <div className='d-flex justify-content-between m-1'>
+          <label className='inputSize'>
+            País:
+            <input type="text" name="country" value={formData.country} onChange={handleChange} required style={{ position: "relative" }} />
+          </label>
+          <label className='inputSize'>
+            Documento de Identificación:
+            <input type="text" name="documentId" value={formData.documentId} onChange={handleChange} required style={{ position: "relative" }} />
+          </label>
+        </div>
+        <div className='d-flex justify-content-around'>
+          <label className='inputSize'>
+            Contraseña:
+            <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="********" required style={{ position: "relative" }} />
+          </label>
+          <label className='inputSize'>
+            Confirmar Contraseña:
+            <input type="password" name="confirmPassword" value={formData.confirmPassword} placeholder="********" onChange={handleChange} required style={{ position: "relative" }} />
+          </label>
+        </div>
+        <div>
+          <label>
+            URL del Perfil:
+            <input className='rc' type="url" name="profileUrl" value={formData.profileUrl} onChange={handleChange} required style={{ position: "relative" }} />
+          </label>
+        </div>
+      </div>
+      <button type="submit" className='btn btn-secondary' style={{ position: "relative" }}>Registrarse</button>
+      <label className='text-center mt-3'>
+        ¿Ya tienes una cuenta Brickly?
+        <a className="px-1 rounded-md underline" href="/login"> Ingresa aquí</a>
+      </label>
+      {message && <p style={{ color: 'green', position: 'relative' }}>{message}</p>}
+      {error && <p style={{ color: 'red', position: 'relative' }}>{error}</p>}
+    </form>
+  </div>
+</div>
+<Footer style={{ position: "relative" }} />
+
       </>
     );
   };

@@ -5,14 +5,14 @@
     position: relative;
     top: 85px;
     width: 650px !important;
-    padding-bottom: 200px;
+    padding-bottom: 67px;
     height: fit-content;
     line-height: 22px;
   
 }
 .containerR{
     margin: 0 auto;
-    max-width: 200px;
+    max-width: 300px;
 }
 .C_Register h1{
     color: #0C49B0;
@@ -67,9 +67,7 @@ select{
     text-align: center;
     font-size: 1em;
 }
-.contenedorR{
-    height: 86vh;
-  }
+
  
   .selectR{
     padding: 10px;
@@ -79,3 +77,12 @@ select{
 .rc{
     width: 98% !important;
 }
+
+.contenedorR{
+  
+    
+    
+    margin: 0 auto;
+    width: 100%;
+
+  }

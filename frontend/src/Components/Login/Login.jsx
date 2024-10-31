@@ -4,6 +4,7 @@ import './Login.css'
 import { Navbar } from '../Navbar/Navbar';
 import { Footer } from '../Footer/Footer';
 import AsideLeft from '../AsideLeft/AsideLeft ';
+import imagen from '../../assets/d_aside.png'
 
 
 
@@ -78,8 +79,9 @@ export const Login = () => {
   return (
     <>
       <Navbar login={"login"} size={"navbar-brand col-2"} />
-      <div className='contenedor d-flex justify-content-between col-12'>
-        <AsideLeft />
+      <div className='contenedor pt-5 d-flex justify-content-between col-12'>
+{/*        <AsideLeft />*/}
+        <img style={{paddingTop:"30px"}} src={imagen} alt="" />
         <form onSubmit={handleSubmit} className="login-container main-content col-6">
           <h1 className="font-bold text-2xl mb-16 text-primary">INICIAR SESION</h1>
           <label htmlFor="email" className="text-black font-bold mb-2 block text-sm">
@@ -104,7 +106,7 @@ export const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit" className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14">
+          <button  type="submit" className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14">
             Entrar
           </button>
           <small className="mt-36 block text-center">
@@ -118,7 +120,7 @@ export const Login = () => {
         </form>
       </div>
    
-      <Footer position="fixed" h="140px" b="0"/>
+      <Footer style={{bottom:"0"}} position="relative"  h="160px" b="0"/>
     </>
   );
 };

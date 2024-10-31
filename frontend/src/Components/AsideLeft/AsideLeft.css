@@ -1,19 +1,19 @@
 /* src/components/AsideLeft.css */
 .aside-left {
     width: 531px;
-    height: 90%;
+    height: 100%;
     color: white;
     padding: 7px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: relative;
     margin-top: 73px;
     z-index: -1;
     background-image: url(/src/assets/d_aside.png);
-    background-position: center;
+
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
     height: 730px;
+    z-index: -2;
 }
 /*1866*/
 @media (min-width: 1600px) {

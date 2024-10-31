@@ -42,7 +42,7 @@ function App() {
           </div> 
       </div>
       */}
-      <div>
+     
 
         <Router>
           <Routes>
@@ -59,7 +59,7 @@ function App() {
           </Routes>
         </Router>
         <VerifyCodeModal show={showModal} handleClose={handleClose} />
-      </div>
+     
     </>
   )
 }

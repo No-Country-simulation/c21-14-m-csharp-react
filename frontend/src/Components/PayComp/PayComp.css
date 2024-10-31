@@ -1,0 +1,133 @@
+.payment-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    height: 700px;
+  }
+  
+  .payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: #f0f4ff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Estilos para la sección de resumen */
+  .summary-section {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .field-value {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Estilos para la sección de pago */
+  .payment-section {
+    padding: 20px;
+  }
+  
+  .amount-display {
+    margin-bottom: 20px;
+  }
+  
+  .amount-display h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .amount {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .payment-methods {
+    margin-bottom: 20px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .card-details {
+    margin-bottom: 20px;
+  }
+  
+  .card-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .expiry-cvv {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .expiry-cvv input {
+    width: 60px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .expiry-cvv input[name="cvv"] {
+    width: 80px;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0047cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .submit-button:hover {
+    background-color: #003399;
+  }
+  
+  /* Estilos generales de inputs */
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Estilos responsive */
+  @media (max-width: 768px) {
+    .payment-grid {
+      grid-template-columns: 1fr;
+    }
+  }

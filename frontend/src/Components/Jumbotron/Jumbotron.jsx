@@ -5,7 +5,7 @@ import "./Jumbotron.css";
 
   return (
 <>
-    <div className='z-0 c_jumbotron d-flex flex-column mb-3 justify-content-center d-flex align-items-center' style={{ backgroundImage: "url(/img/hero.png)", backgroundRepeat: 'no-repeat',backgroundPosition: 'center' }}>
+    <div className='z-0 c_jumbotron d-flex flex-column mb-3 justify-content-center d-flex align-items-center'>
          <div className="container-fluid contenerdorJumbo d-flex flex-column">
                 <h2>Invierte en bienes raíces</h2>
                 <h2 > desde $1000 dólares</h2>

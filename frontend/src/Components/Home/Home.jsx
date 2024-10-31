@@ -14,14 +14,14 @@ import Jumbotron from '../Jumbotron/jumbotron'
 export const Home = () => {
   return (
     <>
-   <Navbar/>
+      <Navbar home={"home"} size={"navbar-brand col-9 col-md-10"}/>
       <Jumbotron/>
       <SectionProject/>
       <Funcionalidad/>
       <SectionInformation/>
       <SectionContact/>
       <LocationMap/>
-      <Footer/>
+      <Footer />
     </>
 
   )

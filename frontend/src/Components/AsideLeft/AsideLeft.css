@@ -1,0 +1,35 @@
+/* src/components/AsideLeft.css */
+.aside-left {
+    width: 531px;
+    height: 100%;
+    color: white;
+    padding: 7px;
+    position: relative;
+    margin-top: 73px;
+    z-index: -1;
+    background-image: url(/src/assets/d_aside.png);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    height: 730px;
+    z-index: -2;
+}
+/*1866*/
+@media (min-width: 1600px) {
+    .aside-left{
+        width: 531px;
+    
+    }
+  }
+  
+@media ( max-width: 1400px) {
+    
+    
+    .aside-left{
+       
+        width: 531px;
+        
+    }
+  }
+  

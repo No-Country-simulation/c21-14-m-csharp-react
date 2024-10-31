@@ -1,19 +1,32 @@
 
 /* styles.css */
 .C_Register {
-    padding: 70px;
-    display: flex;
-    justify-content: center;
-}
-.C_Register form {
-    max-width: 500px;
+
+    position: relative;
+    top: 85px;
+    width: 650px !important;
+    padding-bottom: 67px;
+    height: fit-content;
+    line-height: 22px;
   
-    padding: 1em;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.containerR{
+    margin: 0 auto;
+    max-width: 300px;
+}
+.C_Register h1{
+    color: #0C49B0;
+    font-size: 28px;
+    text-align: center;
+}
+.C_Register b{
+    color: #48974E ;
 }
 
+select{
+    outline: none;
+   
+}
 .C_Register label {
     display: block;
     margin-bottom: 0.5em;
@@ -21,22 +34,29 @@
 }
 
 .C_Register input {
-    width: 100%;
+    line-height: 0px;
+    width: 95%;
     padding: 0.5em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+.inputSize{
+    width: 50%;
+}
 .C_Register button {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 50%;
     padding: 0.7em;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #DBD8D8;
+    color: black;
+    font-weight: 600;
     font-size: 1em;
     cursor: pointer;
+    margin: 0 auto;
 }
 
 .C_Register button:hover {
@@ -47,4 +67,22 @@
     text-align: center;
     font-size: 1em;
 }
+
+ 
+  .selectR{
+    padding: 10px;
+
+    border-radius: 10px;
+  }
+.rc{
+    width: 98% !important;
+}
+
+.contenedorR{
   
+    
+    
+    margin: 0 auto;
+    width: 100%;
+
+  }

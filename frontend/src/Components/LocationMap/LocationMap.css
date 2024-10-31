@@ -2,18 +2,23 @@
     background-color: white;
     padding:0;
     font-family: Arial, sans-serif;
-    margin: -6px;
+   margin-bottom: -40px;
   }
   
   .header {
-    background-color: #0052cc;
+    background-color:#0C49B0;
     color: white;
     text-align: center;
     padding: 26px;
     margin: 0;
     font-size: 18px;
     font-weight: bold;
+    width: 100%;
   }
-  
+  iframe{
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
   .mapswrapper iframe{border:none;position:relative;z-index:2}
   .mapswrapper{background:#fff;position:relative}

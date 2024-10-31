@@ -1,6 +1,12 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css'
+import { Navbar } from '../Navbar/Navbar';
+import { Footer } from '../Footer/Footer';
+import imagen from '../../assets/d_aside.png'
+
+
+
 export const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -41,31 +47,78 @@ export const Login = () => {
     }
   }
 
+
+  const fetchProfile = async (token) => {
+  
+    
+    try {
+      const response = await fetch('https://brickly-backend.onrender.com/api/v1/auth/profile', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json('https://brickly-backend.onrender.com/api/v1/auth/profile');
+        setProfile(data);
+        setDatos(data);
+        const dataJSON = JSON.stringify(data); 
+        localStorage.setItem('data',dataJSON);
+        navigate('/userHome', { state: { profile: data} }); // Passing profile data
+      } else {
+        setError('Failed to fetch user profile.');
+      }
+    } catch (error) {
+      setError('Error: ' + error.message);
+    }
+  };
   return (
-    <div className="login-container">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>email:</label>
+    <>
+      <Navbar login={"login"} size={"navbar-brand col-2"} />
+      <div className='contenedor pt-5 d-flex justify-content-between col-12'>
+{/*        <AsideLeft />*/}
+        <img style={{paddingTop:"30px"}} src={imagen} alt="" />
+        <form onSubmit={handleSubmit} className="login-container main-content col-6">
+          <h1 className="font-bold text-2xl mb-16 text-primary">INICIAR SESION</h1>
+          <label htmlFor="email" className="text-black font-bold mb-2 block text-sm">
+            ¿Cuál es tu correo electrónico?
+          </label>
           <input
             type="email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            className="p-3 rounded block mb-2 border text-slate-300 w-full"
+            placeholder="Ejemplo: tu@correo.com"
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
-        </div>
-        <div>
-          <label>Password:</label>
+          <label htmlFor="password" className="text-black font-bold mt-6 mb-2 block text-sm">
+            Contraseña
+          </label>
           <input
             type="password"
+            className="p-3 rounded block mb-2 border text-slate-300 w-full"
+            placeholder="Escribe tu contraseña"
             value={password}
             onChange={e => setPassword(e.target.value)}
             required
           />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      {error && <div style={{ color: 'red' }}>{error}</div>}
-      {success && <div style={{ color: 'green' }}>{success}</div>}
-    </div>
-  )
-}
+          <button  type="submit" className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14">
+            Entrar
+          </button>
+          <small className="mt-36 block text-center">
+            ¿No tienes una cuenta brickly?
+            <a className="px-1 rounded-md text-trueGray-500" href="/register">
+              Registrate aquí
+            </a>
+          </small>
+          {error && <div style={{ color: 'red' }}>{error}</div>}
+          {success && <div style={{ color: 'green' }}>{success}</div>}
+        </form>
+      </div>
+   
+      <Footer style={{bottom:"0"}} position="relative"  h="160px" b="0"/>
+    </>
+  );
+};

@@ -1,14 +1,108 @@
-.c_navbar{
+.c_navbar {
+  background: #e7edf5;
+  border-bottom-right-radius: 60px;
+  width: 100%;
+}
+.c_navbar .btn {
+  background: #0c49b0;
+  color: white;
+}
+.c_navbar a {
+  padding: 10px 30px !important;
+  color: #0c49b0;
+}
+.btn-rlogin {
+  color: red;
+}
+.botonIngresar:hover {
+  background-color: #0c49b0;
+  color: black;
+}
+.user-options {
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: blue;
+  text-align: center;
+  padding: 8px;
+}
+.user-options option {
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(213, 213, 250);
+  padding: 52px;
+  text-align: center;
+}
 
-    background: #E7EDF5;
-    border-bottom-right-radius: 60px;
-    width: 100%;
+/* Navbar.css */
+.userHome .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #0c49b0;
 }
-.c_navbar .btn{
-    background: #0C49B0;
-    color: white;
+
+.userHome .navbar a {
+  color: #0c49b0;
+  font-weight: 600;
+  text-decoration: none;
 }
-.c_navbar a{
-    padding-right: 30px !important;
-    color:#0C49B0;
+
+.userHome .navbar a:hover {
+  text-decoration: underline;
 }
+
+.userHome .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.userHome .dropbtn {
+  border-radius: 50%;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.userHome .dropbtn:hover {
+  background-color: #555;
+}
+
+.userHome .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  padding: 0;
+  transform: translateX(-60%);
+  margin: 2px;
+  color: black;
+}
+
+.userHome .dropdown-content a {
+    color: black;
+    text-decoration: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.userHome .dropdown-content a:hover {
+  background-color: #0c49b0;
+  color: white;
+  text-decoration: none;
+}
+
+.userHome .dropdown:hover .dropdown-content {
+  display: block;
+}
+

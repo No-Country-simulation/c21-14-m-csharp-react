@@ -3,7 +3,7 @@ import './SectionInformation.css'
 export const SectionInformation = () => {
   return (
     <div className='c_SectionInformation'>
-        <p className='w-50'>En Brickly, buscamos hacer accesible la inversión en bienes raíces para todos, permitiendo que inversores tanto novatos como experimentados diversifiquen su portafolio de manera segura y rentable. </p>
+        <p className='w-75 fs-3'>En Brickly, buscamos hacer accesible la inversión en bienes raíces para todos, permitiendo que inversores tanto novatos como experimentados diversifiquen su portafolio de manera segura y rentable. </p>
         
         <div className='box '>
             <ul>

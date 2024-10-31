@@ -17,6 +17,17 @@ export class InvestmentController {
     return this.investmentServices.allInvestments()
   }
 
+  @Auth('admin')
+  @Get('recently')
+  getRecently() {
+    return this.investmentServices.getRecently()
+  }
+
+  @Get('stats')
+  async getUserInvestmentStats() {
+    return this.investmentServices.getUserInvestmentStats()
+  }
+
   @Get('me')
   getMyInvestments(@ActiveUser() user: UserActiveInterface) {
     return this.investmentServices.findInvestmentsByEmail(user.email)

@@ -1,4 +1,14 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common'
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  ParseIntPipe,
+  Patch,
+  Post,
+  Query,
+} from '@nestjs/common'
 import { Auth } from 'src/auth/decorators/auth.decorator'
 
 import { CreateUserDto } from './dto/create-user.dto'
@@ -16,8 +26,8 @@ export class UsersController {
   }
 
   @Get()
-  findAll() {
-    return this.usersService.findAll()
+  findAll(@Query('search') searchTerm?: string, @Query('totalinv') totalInv?: number) {
+    return this.usersService.findAll(searchTerm, totalInv)
   }
 
   @Get(':id')

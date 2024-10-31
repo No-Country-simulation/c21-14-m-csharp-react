@@ -19,6 +19,7 @@ export class InvestmentService {
       where: userId ? { userId } : {},
     })
   }
+
   async findInvestmentsByEmail(email: string) {
     const user = await this.prisma.user.findUnique({
       where: { email },
@@ -36,6 +37,54 @@ export class InvestmentService {
 
   investmentById(id: number) {
     return this.prisma.investment.findUnique({ where: { id } })
+  }
+
+  async getRecently() {
+    const yesterday = new Date()
+    yesterday.setDate(yesterday.getDate() - 1) // Obtener la fecha de hace 24 horas
+
+    // Contar propiedades con createdAt dentro de las últimas 24 horas
+    const last24HoursPropertyCount = await this.prisma.investment.findMany({
+      where: {
+        date: {
+          gte: yesterday,
+        },
+      },
+      select: {
+        amount: true,
+        date: true,
+        investor: {
+          select: { name: true },
+        },
+        property: {
+          select: { name: true },
+        },
+      },
+    })
+
+    return last24HoursPropertyCount
+  }
+
+  async getUserInvestmentStats() {
+    const usersWithInvestmentCount = await this.prisma.user.count({
+      where: {
+        investments: {
+          some: {},
+        },
+      },
+    })
+
+    // Calcular la suma de todos los montos de las inversiones
+    const totalInvestmentAmount = await this.prisma.investment.aggregate({
+      _sum: {
+        amount: true,
+      },
+    })
+
+    return {
+      usersWithInvestmentCount,
+      totalInvestmentAmount: totalInvestmentAmount._sum.amount || 0,
+    }
   }
 
   async investmentsOfProperty(id: number) {

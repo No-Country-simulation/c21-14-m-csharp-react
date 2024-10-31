@@ -21,8 +21,9 @@ export class UsersService {
     })
   }
 
-  findAll(searchTerm?: string) {
-    return this.prisma.user.findMany({
+  async findAll(searchTerm?: string, totalInv?: number) {
+    // Primera consulta: obtén la información básica de los usuarios
+    const users = await this.prisma.user.findMany({
       where: searchTerm
         ? {
             OR: [
@@ -32,13 +33,31 @@ export class UsersService {
             ],
           }
         : {},
-      select: {
-        id: true,
-        name: true,
-        phone: true,
-        email: true,
+    })
+
+    // Segunda consulta: obtén la suma de las inversiones de cada usuario
+    const investmentsSum = await this.prisma.investment.groupBy({
+      by: ['userId'],
+      _sum: {
+        amount: true,
       },
     })
+
+    // Combina la información de los usuarios con la suma de sus inversiones
+    const usersWithInvestmentSum = users.map((user) => {
+      const userInvestment = investmentsSum.find((investment) => investment.userId === user.id)
+      return {
+        ...user,
+        totalInvestment: userInvestment?._sum.amount || 0, // Agrega el total de inversión o 0 si no tiene inversiones
+      }
+    })
+
+    // Filtra los usuarios por el total de inversión si se proporciona `totalInv`
+    const filteredUsers = totalInv
+      ? usersWithInvestmentSum.filter((user) => user.totalInvestment >= totalInv)
+      : usersWithInvestmentSum
+
+    return filteredUsers
   }
 
   async findDuplicate({ email, phone }: { email: string; phone: string }) {

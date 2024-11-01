@@ -32,6 +32,7 @@ export class InvestmentService {
 
     return this.prisma.investment.findMany({
       where: { userId: user.id },
+      include: { property: true },
     })
   }
 

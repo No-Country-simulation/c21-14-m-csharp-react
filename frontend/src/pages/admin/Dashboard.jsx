@@ -3,7 +3,7 @@ import {
   getPropertiesCount,
   getRecentlyActivity,
   getTotalInvestments,
-} from './lib/getData'
+} from '../../lib/data'
 import RecentlyCard from './components/RecentlyCard'
 import PropertiesCard from './components/PropertiesCard'
 import InvestorsCard from './components/InvestorsCard'

@@ -1,90 +1,97 @@
-import React, { useState ,useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Login.css'
-import { Navbar } from '../Navbar/Navbar';
-import { Footer } from '../Footer/Footer';
-import AsideLeft from '../AsideLeft/AsideLeft ';
+import { Navbar } from '../Navbar/Navbar'
+import { Footer } from '../Footer/Footer'
+import AsideLeft from '../AsideLeft/AsideLeft '
 import imagen from '../../assets/d_aside.png'
-
-
+import Cookies from 'js-cookie'
 
 export const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [success, setSuccess] = useState('');
-  const navigate = useNavigate();
-  const [profile, setProfile] = useState(null);
-  const [datos, setDatos] = useState("");
- 
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
+  const navigate = useNavigate()
+  const [profile, setProfile] = useState(null)
+  const [datos, setDatos] = useState('')
 
-  const handleSubmit = async (e) => {
-    
-    
-    e.preventDefault();
-    setError('');
-    setSuccess('');
+  const handleSubmit = async e => {
+    e.preventDefault()
+    setError('')
+    setSuccess('')
     try {
-      const response = await fetch('https://brickly-backend.onrender.com/api/v1/auth/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        'https://brickly-backend.onrender.com/api/v1/auth/login',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      )
       if (response.ok) {
-        const data = await response.json();
-        setSuccess('Login successful!');
-        localStorage.setItem('token', data.token);        
-        fetchProfile(data.token); // Fetch profile after successful login
+        const data = await response.json()
+        setSuccess('Login successful!')
+        Cookies.set('auth', data.token)
+        fetchProfile(data.token) // Fetch profile after successful login
 
-
-       // if(data.email == "admin@gmail.com") return navigate('/dashboard');
-  
+        // if(data.email == "admin@gmail.com") return navigate('/dashboard');
       } else {
-       navigate('/ErrorLogin');
+        navigate('/ErrorLogin')
       }
     } catch (err) {
-      setError('An error occurred: ' + err.message);
+      setError('An error occurred: ' + err.message)
     }
-  };
+  }
 
-
-  const fetchProfile = async (token) => {
-  
-    
+  const fetchProfile = async token => {
     try {
-      const response = await fetch('https://brickly-backend.onrender.com/api/v1/auth/profile', {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
+      const response = await fetch(
+        'https://brickly-backend.onrender.com/api/v1/auth/profile',
+        {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'application/json',
+          },
         }
-      });
+      )
 
       if (response.ok) {
-        const data = await response.json('https://brickly-backend.onrender.com/api/v1/auth/profile');
-        setProfile(data);
-        setDatos(data);
-        const dataJSON = JSON.stringify(data); 
-        localStorage.setItem('data',dataJSON);
-        navigate('/userHome', { state: { profile: data} }); // Passing profile data
+        const data = await response.json(
+          'https://brickly-backend.onrender.com/api/v1/auth/profile'
+        )
+        setProfile(data)
+        setDatos(data)
+        const dataJSON = JSON.stringify(data)
+        localStorage.setItem('data', dataJSON)
+        navigate('/userHome', { state: { profile: data } }) // Passing profile data
       } else {
-        setError('Failed to fetch user profile.');
+        setError('Failed to fetch user profile.')
       }
     } catch (error) {
-      setError('Error: ' + error.message);
+      setError('Error: ' + error.message)
     }
-  };
+  }
   return (
     <>
-      <Navbar login={"login"} size={"navbar-brand col-2"} />
-      <div className='contenedor pt-5 d-flex justify-content-between col-12'>
-{/*        <AsideLeft />*/}
-        <img style={{paddingTop:"30px"}} src={imagen} alt="" />
-        <form onSubmit={handleSubmit} className="login-container main-content col-6">
-          <h1 className="font-bold text-2xl mb-16 text-primary">INICIAR SESION</h1>
-          <label htmlFor="email" className="text-black font-bold mb-2 block text-sm">
+      <Navbar login={'login'} size={'navbar-brand col-2'} />
+      <div className="contenedor pt-5 d-flex justify-content-between col-12">
+        {/*        <AsideLeft />*/}
+        <img style={{ paddingTop: '30px' }} src={imagen} alt="" />
+        <form
+          onSubmit={handleSubmit}
+          className="login-container main-content col-6"
+        >
+          <h1 className="font-bold text-2xl mb-16 text-primary">
+            INICIAR SESION
+          </h1>
+          <label
+            htmlFor="email"
+            className="text-black font-bold mb-2 block text-sm"
+          >
             ¿Cuál es tu correo electrónico?
           </label>
           <input
@@ -92,10 +99,13 @@ export const Login = () => {
             value={email}
             className="p-3 rounded block mb-2 border text-slate-300 w-full"
             placeholder="Ejemplo: tu@correo.com"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
             required
           />
-          <label htmlFor="password" className="text-black font-bold mt-6 mb-2 block text-sm">
+          <label
+            htmlFor="password"
+            className="text-black font-bold mt-6 mb-2 block text-sm"
+          >
             Contraseña
           </label>
           <input
@@ -103,10 +113,13 @@ export const Login = () => {
             className="p-3 rounded block mb-2 border text-slate-300 w-full"
             placeholder="Escribe tu contraseña"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
             required
           />
-          <button  type="submit" className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14">
+          <button
+            type="submit"
+            className="w-40 bg-black float-right text-white px-3 p-2 rounded-lg mt-14"
+          >
             Entrar
           </button>
           <small className="mt-36 block text-center">
@@ -119,8 +132,8 @@ export const Login = () => {
           {success && <div style={{ color: 'green' }}>{success}</div>}
         </form>
       </div>
-   
-      <Footer style={{bottom:"0"}} position="relative"  h="160px" b="0"/>
+
+      <Footer style={{ bottom: '0' }} position="relative" h="160px" b="0" />
     </>
-  );
-};
+  )
+}

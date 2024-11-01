@@ -1,8 +1,11 @@
 // tailwind.config.js
 export default {
-  content: ['./src/pages/**/*.{js,ts,jsx,tsx}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      aspectRatio: {
+        '4/3': '4 / 3',
+      },
       colors: {
         main: '#0C49B0',
         secon: '#082E70',

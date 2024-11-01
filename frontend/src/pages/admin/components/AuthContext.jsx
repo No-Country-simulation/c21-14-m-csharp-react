@@ -9,7 +9,6 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     // Leer la cookie de autenticación
     const authCookie = Cookies.get('auth')
-    console.log('Auth Cookie:', authCookie) // Verifica si la cookie se lee correctamente
     if (authCookie.length > 0) setIsAuthenticated(true) // Establece isAuthenticated como true o false
   }, []) // Solo se ejecuta una vez al montar el componente
 

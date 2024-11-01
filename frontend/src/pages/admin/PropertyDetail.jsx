@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getPropertyInfo } from './lib/getData'
+import { getPropertyInfo } from '../../lib/data'
 import { Header } from './components/Header'
 import { Loading } from './components/Loading'
 

@@ -1,10 +1,9 @@
-import React from "react";
-import "./Navbar.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Link } from "react-router-dom";
+import React from 'react'
+import './Navbar.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom'
 
 export const Navbar = ({
-
   loggedIn,
   home,
   login,
@@ -14,13 +13,12 @@ export const Navbar = ({
   userHome,
   PropertyDetail,
   modal,
-  profile
+  profile,
 }) => {
-  const boxStyle = {boxShadow: '9px 9px 8px rgba(0, 0, 0, 0.3)' };
+  const boxStyle = { boxShadow: '9px 9px 8px rgba(0, 0, 0, 0.3)' }
   return (
-    
     <>
-      <nav style={boxStyle} className=" position-fixed navbar navbar-expand-lg  z-1 navbar-light c_navbar">
+      <nav className="bg-slate-200  w-full shadow-xl shadow-slate-300 rounded-br-[50px] flex items-center justify-between px-20 py-3">
         <a className="navbar-brand" href="/">
           <svg
             width="200"
@@ -30,7 +28,7 @@ export const Navbar = ({
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M3 23.9799L28.3042 3.57047C29.1578 2.88192 30.3789 3.02327 31.0682 3.89042L50.0377 27.7542C51.1238 29.1208 50.1954 31.1937 48.4969 31.1937H35.0784C33.9715 31.1937 33.0741 32.1329 33.0741 33.2914V48.8027M52.7715 38.7641V54.9562C52.7715 56.1145 51.8743 57.0539 50.7673 57.0539H9.32011C8.21322 57.0539 7.31589 56.1145 7.31589 54.9562V32.2217C7.31589 31.5732 7.60247 30.9611 8.09217 30.5638L24.9333 16.8987" 
+              d="M3 23.9799L28.3042 3.57047C29.1578 2.88192 30.3789 3.02327 31.0682 3.89042L50.0377 27.7542C51.1238 29.1208 50.1954 31.1937 48.4969 31.1937H35.0784C33.9715 31.1937 33.0741 32.1329 33.0741 33.2914V48.8027M52.7715 38.7641V54.9562C52.7715 56.1145 51.8743 57.0539 50.7673 57.0539H9.32011C8.21322 57.0539 7.31589 56.1145 7.31589 54.9562V32.2217C7.31589 31.5732 7.60247 30.9611 8.09217 30.5638L24.9333 16.8987"
               stroke="url(#paint0_linear_410_153)"
               strokeWidth="4.49258"
               strokeLinecap="round"
@@ -76,13 +74,11 @@ export const Navbar = ({
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div  
+        <div
           className="collapse navbar-collapse  d-flex justify-content-end mx-5"
           id="navbarNav"
         >
-          {
-          
-          home == "home" ? (
+          {home == 'home' ? (
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a className="nav-link" href="#seccion1">
@@ -100,9 +96,9 @@ export const Navbar = ({
                 </Link>
               </li>
             </ul>
-          ) : login == "login" ? (
+          ) : login == 'login' ? (
             <ul className="navbar-nav mb-2 col-3 mb-lg-2">
-              <li classn="nav-item">
+              <li className="nav-item">
                 <Link
                   className="btn btn-outline-primary btn-rlogin"
                   to="/Register"
@@ -111,7 +107,7 @@ export const Navbar = ({
                 </Link>
               </li>
             </ul>
-          ) : register == "register" ? (
+          ) : register == 'register' ? (
             <>
               <ul className="navbar-nav mb-2  mb-lg-0 col-2">
                 <li className="nav-item">
@@ -124,120 +120,196 @@ export const Navbar = ({
                 </li>
               </ul>
             </>
-          ) : userHome == "userHome" ? (
+          ) : userHome == 'userHome' ? (
             <div className="userHome">
               <nav className="navbar">
-                {" "}
+                {' '}
                 <div className="navbar-brand">
-                  {" "}
-                  <Link to="/">Home</Link>{" "}
-                </div>{" "}
+                  {' '}
+                  <Link to="/">Home</Link>{' '}
+                </div>{' '}
                 <div className="navbar-brand">
-                  {" "}
-                  <Link className="text-decoration-underline link-offset-3" to="/Portfolio"  >Mi Portafolio</Link>{" "}
-                </div>{" "}
+                  {' '}
+                  <Link
+                    className="text-decoration-underline link-offset-3"
+                    to="/Portfolio"
+                  >
+                    Mi Portafolio
+                  </Link>{' '}
+                </div>{' '}
                 <div className="navbar-links">
-                  {" "}
+                  {' '}
                   {loggedIn ? (
                     <div className="dropdown">
-                      {" "}
-                      <button className="dropbtn">🧑</button>{" "}
+                      {' '}
+                      <button className="dropbtn">🧑</button>{' '}
                       <div className="dropdown-content">
-                        {" "}
-                        <Link to="/account">Mi cuenta</Link>{" "}
-                        <Link to="/notifications">Notificaciones</Link>{" "}
+                        {' '}
+                        <Link to="/account">Mi cuenta</Link>{' '}
+                        <Link to="/notifications">Notificaciones</Link>{' '}
                         <a href="/" onClick={() => handleLogout()}>
                           Cerrar sesión
-                        </a>{" "}
-                      </div>{" "}
+                        </a>{' '}
+                      </div>{' '}
                     </div>
                   ) : (
                     <>
-                      {" "}
-                      <Link to="/login">Login</Link>{" "}
-                      <Link to="/register">Signup</Link>{" "}
+                      {' '}
+                      <Link to="/login">Login</Link>{' '}
+                      <Link to="/register">Signup</Link>{' '}
                     </>
-                  )}{" "}
-                </div>{" "}
+                  )}{' '}
+                </div>{' '}
               </nav>
             </div>
-          ) : PropertyDetail == "PropertyDetail" ? (
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link " to="/Login">
-                    Ingresar
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="btn btn-outline-primary " to="/Register">
-                    Crear cuenta
-                  </Link>
-                </li>
-              </ul>
-          ) :userHome == "userHome" ? (
-              <div className="userHome">
-                <nav className="navbar">
-                  {" "}
-                  <div className="navbar-brand">
-                    {" "}
-                    <Link to="/">Home</Link>{" "}
-                  </div>{" "}
-                  <div className="navbar-brand">
-                    {" "}
-                    <Link className="text-decoration-underline link-offset-3" to="/">Mi Portafolio</Link>{" "}
-                  </div>{" "}
-                  <div className="navbar-links">
-                    {" "}
-                    {loggedIn ? (
-                      <div className="dropdown">
-                        {" "}
-                        <button className="dropbtn">🧑</button>{" "}
-                        <div className="dropdown-content">
-                          {" "}
-                          <Link to="/account">Mi cuenta</Link>{" "}
-                          <Link to="/notifications">Notificaciones</Link>{" "}
-                          <a href="/" onClick={() => handleLogout()}>
-                            Cerrar sesión
-                          </a>{" "}
-                        </div>{" "}
-                      </div>
-                    ) : (
-                      <>
-                        {" "}
-                        <Link to="/login">Login</Link>{" "}
-                        <Link to="/register">Signup</Link>{" "}
-                      </>
-                    )}{" "}
-                  </div>{" "}
-                </nav>
-              </div>
-            ) : modal == "a" ? (
-                <ul className="navbar-nav ml-auto">
-                  <li className="nav-item">
-                    <a className="nav-link" href="/">
-                      Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link " to="/Login">
-                      Ingresar
-                    </Link>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="btn btn-outline-primary " to="/Register">
-                      Crear cuenta
-                    </Link>
-                  </li>
-                </ul>
-              ) :""
-          }
+          ) : PropertyDetail == 'PropertyDetail' ? (
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link " to="/Login">
+                  Ingresar
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="btn btn-outline-primary " to="/Register">
+                  Crear cuenta
+                </Link>
+              </li>
+            </ul>
+          ) : userHome == 'userHome' ? (
+            <div className="userHome">
+              <nav className="navbar">
+                {' '}
+                <div className="navbar-brand">
+                  {' '}
+                  <Link to="/">Home</Link>{' '}
+                </div>{' '}
+                <div className="navbar-brand">
+                  {' '}
+                  <Link
+                    className="text-decoration-underline link-offset-3"
+                    to="/"
+                  >
+                    Mi Portafolio
+                  </Link>{' '}
+                </div>{' '}
+                <div className="navbar-links">
+                  {' '}
+                  {loggedIn ? (
+                    <div className="dropdown">
+                      {' '}
+                      <button className="dropbtn">🧑</button>{' '}
+                      <div className="dropdown-content">
+                        {' '}
+                        <Link to="/account">Mi cuenta</Link>{' '}
+                        <Link to="/notifications">Notificaciones</Link>{' '}
+                        <a href="/" onClick={() => handleLogout()}>
+                          Cerrar sesión
+                        </a>{' '}
+                      </div>{' '}
+                    </div>
+                  ) : (
+                    <>
+                      {' '}
+                      <Link to="/login">Login</Link>{' '}
+                      <Link to="/register">Signup</Link>{' '}
+                    </>
+                  )}{' '}
+                </div>{' '}
+              </nav>
+            </div>
+          ) : modal == 'a' ? (
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link " to="/Login">
+                  Ingresar
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="btn btn-outline-primary " to="/Register">
+                  Crear cuenta
+                </Link>
+              </li>
+            </ul>
+          ) : (
+            ''
+          )}
         </div>
+        {userHome && (
+          <div className="userHome">
+            <nav className="flex gap-4">
+              {' '}
+              <div className="navbar-brand">
+                {' '}
+                <Link to="/userhome">Home</Link>{' '}
+              </div>{' '}
+              <div className="navbar-brand">
+                {' '}
+                <Link
+                  className="text-decoration-underline link-offset-3"
+                  to="/Portfolio"
+                >
+                  Mi Portafolio
+                </Link>{' '}
+              </div>{' '}
+              <div className="navbar-links">
+                {' '}
+                {loggedIn ? (
+                  <div className="dropdown">
+                    {' '}
+                    <button className="dropbtn">🧑</button>{' '}
+                    <div className="dropdown-content">
+                      {' '}
+                      <Link to="/account">Mi cuenta</Link>{' '}
+                      <Link to="/notifications">Notificaciones</Link>{' '}
+                      <a href="/" onClick={() => handleLogout()}>
+                        Cerrar sesión
+                      </a>{' '}
+                    </div>{' '}
+                  </div>
+                ) : (
+                  <>
+                    {' '}
+                    <Link to="/login">Login</Link>{' '}
+                    <Link to="/register">Signup</Link>{' '}
+                  </>
+                )}{' '}
+              </div>{' '}
+            </nav>
+          </div>
+        )}
+        {home && (
+          <ul className="flex w-3/4 gap-5 font-bold items-center">
+            <li className="">
+              <a className="" href="#seccion1">
+                Cómo funciona
+              </a>
+            </li>
+            <li className="">
+              <Link
+                className="hover:bg-black hover:text-white px-3 rounded-md py-2 transition-colors duration-200"
+                to="/Login"
+              >
+                Ingresar
+              </Link>
+            </li>
+            <li className="">
+              <Link className="btn btn-outline-primary " to="/Register">
+                Crear cuenta
+              </Link>
+            </li>
+          </ul>
+        )}
       </nav>
     </>
-  );
-};
+  )
+}

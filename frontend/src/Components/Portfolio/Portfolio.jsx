@@ -1,106 +1,104 @@
-import React from "react";
-import "./Portfolio.css";
-import { useLocation } from 'react-router-dom';
-import {Navbar} from '../Navbar/Navbar'
-import {Footer} from '../Footer/Footer'
+import { useEffect, useState } from 'react'
+import './Portfolio.css'
+import { Navbar } from '../Navbar/Navbar'
+import { Footer } from '../Footer/Footer'
 import LocationMap from '../LocationMap/LocationMap'
 import invImg from '../../assets/noInver.png'
 import OtherProjects from '../OtherProjects/OtherProjects'
-import img2 from '../../assets/o_2.png';
-import img5 from '../../assets/o_5.jpg';
-import PropertyFilter from "../PropertyFilter/PropertyFilter";
+import { getMyInvestments } from '../../lib/data'
+
+function calcularMontoFinal(montoInicial, meses, interesAnual) {
+  const tasaMensual = interesAnual / 12 / 100
+  const montoFinal = montoInicial * Math.pow(1 + tasaMensual, meses)
+  return montoFinal.toFixed(2)
+}
+
+function calcularFechaConMeses(fechaInicial, meses) {
+  const fecha = new Date(fechaInicial)
+  fecha.setMonth(fecha.getMonth() + meses) // Sumar los meses a la fecha
+
+  const dia = String(fecha.getDate()).padStart(2, '0')
+  const mes = String(fecha.getMonth() + 1).padStart(2, '0') // getMonth() es 0-indexed, por eso sumamos 1
+  const anio = String(fecha.getFullYear()).slice(-2) // Obtener los últimos dos dígitos del año
+
+  return `${dia}/${mes}/${anio}`
+}
 
 export const Portfolio = () => {
+  const dataJSON = localStorage.getItem('data')
+  const user = JSON.parse(dataJSON)
+  const [projects, setProjects] = useState([])
+  const [loading, setLoading] = useState(true)
 
-  const dataJSON = localStorage.getItem('data');
-  const user = JSON.parse(dataJSON);
-
-  
-  const projects = [
-      { name: 'Lago del Sol', price: '$30,200.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit am fjjfjfjet...', image: img5 },
-      { name: 'La Hacienda Imperial', price: '$1,560.00', description: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet...', image: img2 },
-     
-      ];
-
+  useEffect(() => {
+    async function getData() {
+      try {
+        const response = await getMyInvestments()
+        setProjects(response)
+        console.log(projects)
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setLoading(false)
+      }
+    }
+    getData()
+  }, [])
 
   return (
-<>
-<Navbar userHome={"userHome"} loggedIn={true}/>
+    <>
+      <Navbar userHome={'userHome'} loggedIn={true} />
 
-
-
-<div className="perfil">
-
-      {" "}
-      {user ? (
+      <div className="px-20">
         <div className="container pt-5">
-            <h1>Hola, {user.name}!</h1>
-            <div className="d-flex justify-content-around align-item-center container m-5 inversiones pt-3">
-                <p>Monto disponible: $120,000  </p>
-                <p>Proyectos Invertidos: 2</p>
-                <p>Ganacias: $3,000</p>
-            </div>
-            <h2>Tus Inversiones inmobilarias</h2>
-          
-                 <div className="project-gallery  m-auto "> 
-                      <div className="projects-grid py-5 mt-3">
-                             {projects.map(project => (
-                                 <OtherProjects card={project}/>
-                              ))}
-                        </div>
-                        
-                                 <button className='btn-verMas mx-auto my-5'>Ver más</button>
-                    </div>
+          <h1 className="font-bold text-2xl">Hola, {user.name}!</h1>
+          <h2 className="font-bold text-3xl">Tus Inversiones inmobilarias</h2>
 
-                  {/*  {" "}
-                    <h1>Profile Details</h1> <p>Name: {profile.name}</p>{" "}
-                    <p>Email: {profile.email}</p> <p>Phone: {profile.phone}</p>{" "}
-                    <p>Country: {profile.country}</p>{" "}
-                    <p>Document ID: {profile.documentId}</p>{" "}
-                    <p>Profile URL: {profile.profileUrl}</p>{" "}*/}
+          <div className="grid grid-cols-2 gap-4 py-5 mt-3">
+            {projects.map((item, index) => (
+              <div
+                key={index}
+                className="col-span-1 h-[300px] bg-slate-200 rounded-md px-3 py-3 flex gap-3"
+              >
+                <div className="w-1/2 flex flex-col gap-2 items-center overflow-hidden">
+                  <img
+                    src={item.property.photosUrl.split(',')[0]}
+                    alt=""
+                    className="aspect-square w-3/4 object-cover"
+                  />
+                  <p className="font-bold text-xl z-10">{item.property.name}</p>
+                </div>
+                <div className="w-1/2 flex flex-col items-center justify-between py-4">
+                  <p className="font-bold text-xl italic">Monto invertido:</p>
+                  <p className="font-bold text-2xl text-green-700">
+                    ${item.amount}
+                  </p>
+
+                  <p className="font-bold text-xl italic">
+                    Podrás retiral tu capital el día
+                  </p>
+                  <p className="font-bold text-2xl text-blue-500">
+                    {calcularFechaConMeses(item.date, item.property.time)}
+                  </p>
+
+                  <p className="font-bold text-xl italic">Monto a retirar</p>
+                  <p className="font-bold text-2xl text-yellow-500">
+                    $
+                    {calcularMontoFinal(
+                      item.amount,
+                      item.property.time,
+                      item.property.profit
+                    )}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      ) : (
-        <div className="container pt-5">
-        
-            <div className="d-flex justify-content-around align-item-center container m-5 inversiones pt-3">
-                <p>Monto disponible: $120,000  </p>
-                <p>Proyectos Invertidos: 2</p>
-                <p>Ganacias: $3,000</p>
-            </div>
-            <h2>Tus Inversiones inmobilarias</h2>
-            <div className="d-flex justify-content-center flex-column align-items-center p-5 m-5">
-                 <img className="w-50" src={invImg} alt="" />
-                 <p style={{color:"#48974E"}} className="p-3 fs-3">Aún no tienes inversiones</p>
-            </div>
-           
-          
-                 
+      </div>
 
-        </div>
-      )}{" "}
-    </div>
-
-    <hr className='m-auto'/>
-    <h1 className="px-5 pt-4">Tus favoritos</h1>
-    <PropertyFilter/>
-
-    <div className="project-gallery  m-auto "> 
-                      <div className="projects-grid py-5 mt-3">
-                             {projects.map(project => (
-                                 <OtherProjects card={project}/>
-                              ))}
-                        </div>
-                                 <button className='btn-verMas mx-auto my-5'>Ver más</button>
-                    </div>
-
-    <LocationMap/>
-    <Footer style={{ 
-    padding:"40px 16px",
-    height:"190px",}}/>
-    
-</>
-    
-    
-    
-  );
-};
+      <LocationMap />
+      <Footer />
+    </>
+  )
+}

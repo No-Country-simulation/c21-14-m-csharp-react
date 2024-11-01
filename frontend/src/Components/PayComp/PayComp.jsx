@@ -1,79 +1,90 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Footer } from '../Footer/Footer'
 import { Navbar } from '../Navbar/Navbar'
 import './PayComp.css'
+import { addInvestment, getPropertyInfo } from '../../lib/data'
+import { useNavigate, useParams } from 'react-router-dom'
 
 export const PayComp = () => {
-    const [formData, setFormData] = useState({
-        projectName: '',
-        location: '',
-        investmentAmount: '',
-        paymentMethod: 'credit',
-        cardNumber: '',
-        expirationMonth: '',
-        expirationYear: '',
-        cvv: ''
-      });
-    
-      const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({
-          ...prevState,
-          [name]: value
-        }));
-      };
-    
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Form submitted:', formData);
-      };
+  const [formData, setFormData] = useState({
+    amount: '',
+  })
+  const [property, setProperty] = useState({})
+  const { id } = useParams()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    async function getData() {
+      setProperty(await getPropertyInfo(id))
+    }
+
+    getData()
+  }, [id])
+
+  const handleInputChange = e => {
+    const { name, value } = e.target
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    const response = await addInvestment(property.id, Number(formData.amount))
+    console.log(response)
+  }
 
   return (
-   <>
-   <Navbar userHome={"userHome"} loggedIn={true} />
-   <h2 style={{paddingTop:"95px",paddingLeft:"20px"}} className='text-primary  h-6 fs-1'>Realiza tu inversion</h2>
-   <div className="payment-container">
+    <>
+      <Navbar userHome={'userHome'} loggedIn={true} />
+      <main className="px-20 py-10">
+        <h2 className="text-main font-bold text-4xl text-center">
+          Realiza tu inversion
+        </h2>
+        <div className="payment-container">
           <form onSubmit={handleSubmit}>
             <div className="payment-grid">
               {/* Columna izquierda - Resumen */}
               <div className="summary-section">
-                <h2 className='text-primary'>Resumen</h2>
+                <h2 className="text-primary">Resumen</h2>
                 <div className="form-group">
                   <label>Nombre del proyecto:</label>
-                  <p className="field-value">[Project Name]</p>
+                  <p className="field-value">{property.name}</p>
                 </div>
                 <div className="form-group">
                   <label>Ubicación:</label>
-                  <p className="field-value">[City]</p>
+                  <p className="field-value">
+                    {property.city}, {property.country}
+                  </p>
                 </div>
                 <div className="form-group">
                   <label>Precio de inversión (mínimo):</label>
-                  <p className="field-value">$000,000.00</p>
+                  <p className="field-value">{property.minAmount}</p>
                 </div>
                 <div className="form-group">
                   <label>Plazo de la inversión:</label>
-                  <p className="field-value">[0000]</p>
+                  <p className="field-value">{property.time} meses</p>
                 </div>
                 <div className="form-group mt-5 pt-4">
-                  <label className='fs-5'>Monto a invertir:</label>
+                  <label className="fs-5">Monto a invertir:</label>
                   <input
-
                     type="text"
-                    name="investmentAmount"
+                    name="amount"
                     placeholder="Escriba el monto"
-                    value={formData.investmentAmount}
+                    value={formData.amount}
                     onChange={handleInputChange}
                   />
                 </div>
               </div>
-    
+
               {/* Columna derecha - Método de pago */}
               <div className="payment-section">
                 <div className="amount-display">
-                  <h3 className='fs-5'>Monto a invertir:</h3>
-                  <p className="amount">[$000,000.00]</p>
+                  <h3 className="fs-5">Monto a invertir:</h3>
+                  <p className="amount">${formData.amount}</p>
                 </div>
-    
+
                 <div className="payment-methods">
                   <h4>Selecciona el método de pago</h4>
                   <div className="radio-group">
@@ -112,7 +123,7 @@ export const PayComp = () => {
                     </div>
                   </div>
                 </div>
-    
+
                 <div className="card-details">
                   <input
                     type="text"
@@ -130,7 +141,9 @@ export const PayComp = () => {
                       value={formData.expirationMonth}
                       onChange={handleInputChange}
                     />
-                    <span className='fs-4'><b>/</b></span>
+                    <span className="fs-4">
+                      <b>/</b>
+                    </span>
                     <input
                       type="text"
                       name="expirationYear"
@@ -149,15 +162,20 @@ export const PayComp = () => {
                     />
                   </div>
                 </div>
-    
-                <button type="submit" className="submit-button p-2 mt-2 rounded">
+
+                <button
+                  type="submit"
+                  className="submit-button p-2 mt-2 rounded"
+                >
                   Aceptar
                 </button>
               </div>
             </div>
           </form>
         </div>
-   <Footer position="fixed" h="140px" b="0"/>
-   </>
+      </main>
+
+      <Footer position="fixed" h="140px" b="0" />
+    </>
   )
 }

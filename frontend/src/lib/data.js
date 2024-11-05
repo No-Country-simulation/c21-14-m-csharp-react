@@ -17,6 +17,10 @@ const handleResponse = async promise => {
   }
 }
 
+export const loginUser = async form => {
+  handleResponse(apiClient.post('/auth/login', form))
+}
+
 export const getRecentlyActivity = () =>
   handleResponse(apiClient.get('/investments/recently'))
 
@@ -36,3 +40,5 @@ export const getMyInvestments = () =>
 
 export const addInvestment = (propertyId, amount) =>
   handleResponse(apiClient.post('/investments/' + propertyId, { amount }))
+
+export const getProfile = () => handleResponse(apiClient.get('/auth/profile'))

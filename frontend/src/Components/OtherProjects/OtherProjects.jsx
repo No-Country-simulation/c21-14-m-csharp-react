@@ -14,7 +14,7 @@ function OtherProjects({ card }) {
 
       <div className="flex flex-col">
         <div className="flex flex-col">
-          <p className="font-bold text-lg">Precio de inversión: </p>
+          <p className="font-bold text-lg">Mínimo de inversión: </p>
           <p className="text-lg">${card.minAmount}</p>
         </div>
         <div className="flex flex-col py-3 h-[180px]">

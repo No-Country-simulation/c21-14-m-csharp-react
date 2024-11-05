@@ -47,8 +47,10 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json()
         console.log('Login successful:', data)
+        Cookies.set(data.token)
+
         login(data.token)
-        Cookies.set('auth', data.token)
+
         navigate('/admin/dashboard')
       } else {
         setError('Credenciales inválidas')

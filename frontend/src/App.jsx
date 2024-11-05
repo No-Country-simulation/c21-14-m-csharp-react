@@ -47,13 +47,12 @@ function App() {
         <Route path="/admin">
           <Route path="login" element={<LoginAdmin />} />
           {/* Rutas protegidas con PrivateRoute */}
-          <Route element={<PrivateRoute />}>
-            <Route path="dashboard" element={<Dashboard />} />
-            <Route path="addproperty" element={<AddProperty />} />
-            <Route path="portfolio" element={<PropertiesPortfolio />} />
-            <Route path="users" element={<UsersView />} />
-            <Route path="property/:id" element={<PropertyDetailAdmin />} />
-          </Route>
+
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="addproperty" element={<AddProperty />} />
+          <Route path="portfolio" element={<PropertiesPortfolio />} />
+          <Route path="users" element={<UsersView />} />
+          <Route path="property/:id" element={<PropertyDetailAdmin />} />
         </Route>
       </Routes>
       <VerifyCodeModal show={showModal} handleClose={handleClose} />

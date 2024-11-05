@@ -15,7 +15,7 @@ export const Home = () => {
     <>
       <Navbar home={true} size={'navbar-brand col-9 col-md-10'} />
       <Jumbotron />
-      <SectionProject />
+
       <Funcionalidad />
       <SectionInformation />
       <SectionContact />

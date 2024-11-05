@@ -6,13 +6,12 @@ import LocationMap from '../LocationMap/LocationMap'
 import OtherProjects from '../OtherProjects/OtherProjects'
 import axios from 'axios'
 import SearchProperties from '../../pages/admin/components/SearchProperties'
+import { getProfile } from '../../lib/data'
 
 export const UserHome = () => {
-  const location = useLocation()
-  const profile = location.state?.profile
-
   const [loading, setLoading] = useState(true)
   const [projects, setProjects] = useState([])
+  const [name, setName] = useState(false)
 
   useEffect(() => {
     async function getData() {
@@ -21,6 +20,8 @@ export const UserHome = () => {
           'https://brickly-backend.onrender.com/api/v1/properties'
         )
         setProjects(response.data)
+        const userProfile = await getProfile()
+        setName(userProfile.name)
       } catch (error) {
         console.log(error)
       }
@@ -32,10 +33,10 @@ export const UserHome = () => {
     <div>
       <Navbar userHome={true} loggedIn={true} />
       <div className="pt-20 px-20">
-        {profile ? (
+        {name ? (
           <div className="container pt-5">
             <h1 className="text-4xl text-main font-semibold mb-5">
-              Hola, {profile.name}!
+              Hola, {name}!
             </h1>
             <h2 className="text-3xl mb-2">Proyectos Brickly</h2>
             <p className="text-3xl mb-2">Quizás te puedan interesar</p>
@@ -59,12 +60,10 @@ export const UserHome = () => {
         <SearchProperties setData={setProjects} setLoading={setLoading} />
         <div className="m-auto">
           <div className="grid grid-cols-4 gap-4 py-5 mt-3">
-            {projects.map(
-              (project, index) =>
-                index > 4 && <OtherProjects key={project.id} card={project} />
-            )}
+            {projects.map((project, index) => (
+              <OtherProjects key={project.id} card={project} />
+            ))}
           </div>
-          <button className="btn-verMas mx-auto my-5">Ver más</button>
         </div>
       </div>
       <LocationMap />

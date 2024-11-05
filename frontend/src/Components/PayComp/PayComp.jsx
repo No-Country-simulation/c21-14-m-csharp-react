@@ -31,8 +31,12 @@ export const PayComp = () => {
 
   const handleSubmit = async e => {
     e.preventDefault()
-    const response = await addInvestment(property.id, Number(formData.amount))
-    console.log(response)
+    try {
+      await addInvestment(property.id, Number(formData.amount))
+      navigate('/portfolio')
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return (
